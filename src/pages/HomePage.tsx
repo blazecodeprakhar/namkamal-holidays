@@ -9,6 +9,7 @@ import { COMPANY_INFO, SERVICES_LIST } from '../data/companyData';
 import { DOMESTIC_DESTINATIONS, INTERNATIONAL_DESTINATIONS } from '../data/destinations';
 import { PACKAGES_DATA } from '../data/packages';
 import { CUSTOMER_REVIEWS } from '../data/reviews';
+import { UserAvatar } from '../components/UserAvatar';
 
 interface HomePageProps {
   onOpenEnquiry: (prefillDestination?: string) => void;
@@ -299,13 +300,13 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenEnquiry }) => {
                         <Star key={i} className="w-4 h-4 fill-amber-400" />
                       ))}
                     </div>
-                    <p className="text-xs sm:text-sm text-gray-700 leading-relaxed italic mb-8">
+                    <p className="text-xs sm:text-sm text-gray-700 leading-relaxed italic mb-8 whitespace-pre-line">
                       "{rev.comment}"
                     </p>
                   </div>
 
                   <div className="flex items-center gap-3 pt-4 border-t border-gray-200">
-                    <img src={rev.avatar} alt={rev.author} className="w-11 h-11 rounded-full object-cover" />
+                    <UserAvatar name={rev.author} avatarUrl={rev.avatar} />
                     <div>
                       <h4 className="text-sm font-bold text-gray-900">{rev.author}</h4>
                       <span className="text-xs text-gray-500">{rev.location}</span>

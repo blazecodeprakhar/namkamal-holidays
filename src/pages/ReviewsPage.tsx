@@ -3,6 +3,7 @@ import { Star, ExternalLink } from 'lucide-react';
 import { SEOHead } from '../components/SEOHead';
 import { CUSTOMER_REVIEWS } from '../data/reviews';
 import { COMPANY_INFO } from '../data/companyData';
+import { UserAvatar } from '../components/UserAvatar';
 
 export const ReviewsPage: React.FC = () => {
   return (
@@ -55,13 +56,13 @@ export const ReviewsPage: React.FC = () => {
                     <span className="text-[11px] text-gray-400 font-medium">{rev.date}</span>
                   </div>
 
-                  <p className="text-xs sm:text-sm text-gray-700 leading-relaxed italic mb-8">
+                  <p className="text-xs sm:text-sm text-gray-700 leading-relaxed italic mb-8 whitespace-pre-line">
                     "{rev.comment}"
                   </p>
                 </div>
 
                 <div className="flex items-center gap-3 pt-4 border-t border-gray-200">
-                  <img src={rev.avatar} alt={rev.author} className="w-11 h-11 rounded-full object-cover group-hover:ring-2 group-hover:ring-[#F7941D] transition-all" />
+                  <UserAvatar name={rev.author} avatarUrl={rev.avatar} />
                   <div>
                     <h4 className="text-sm font-bold text-gray-900 group-hover:text-[#F7941D] transition-colors">{rev.author}</h4>
                     <span className="text-xs text-gray-500">{rev.location}</span>
