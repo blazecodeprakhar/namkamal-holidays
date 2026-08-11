@@ -25,63 +25,72 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenEnquiry }) => {
       />
 
       {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center justify-center text-white overflow-hidden bg-gray-900">
+      <section className="relative min-h-[85vh] flex items-center justify-center text-white overflow-hidden bg-gray-950">
+        {/* Animated Background Image */}
         <img 
           src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=85" 
           alt="Namkamal Holidays Travel World"
-          className="absolute inset-0 w-full h-full object-cover opacity-45 scale-105 animate-pulse duration-[10000ms]"
+          className="absolute inset-0 w-full h-full object-cover opacity-50 scale-105 transition-transform duration-[15000ms] ease-out hover:scale-115"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-transparent" />
+        
+        {/* Ambient Gradient Overlays & Glowing Light Orbs */}
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-black/30" />
+        <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-[650px] h-[650px] bg-gradient-to-tr from-[#F7941D]/25 to-[#E91E63]/25 rounded-full blur-3xl animate-pulse-glow pointer-events-none" />
+        <div className="absolute bottom-10 right-10 w-96 h-96 bg-emerald-500/15 rounded-full blur-3xl pointer-events-none" />
 
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-20 z-10">
           
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#F7941D] text-xs sm:text-sm font-bold uppercase tracking-widest mb-6 shadow-xl animate-in fade-in duration-500">
+          {/* Floating Trust Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#F7941D] text-xs sm:text-sm font-bold uppercase tracking-widest mb-6 shadow-2xl animate-float">
             <ShieldCheck className="w-4 h-4 text-emerald-400" /> OFFICIAL WEBSITE • NAMKAMAL HOLIDAYS™
           </div>
 
-          <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-tight text-white mb-6">
+          {/* Hero Heading */}
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-tight text-white mb-6 animate-fade-in-up">
             Your Journey, <span className="text-brand-gradient">Our Commitment</span>
           </h1>
 
-          <p className="text-base sm:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed font-medium mb-10">
+          {/* Subtitle */}
+          <p className="text-base sm:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed font-medium mb-10 animate-fade-in-up animation-delay-100">
             Discover thoughtfully planned holidays, customized travel experiences, and seamless domestic & international travel assistance with Namkamal Holidays.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          {/* Hero CTA Buttons */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up animation-delay-200">
             <button
               onClick={() => onOpenEnquiry()}
-              className="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-[#F7941D] to-[#E91E63] hover:opacity-95 text-white font-extrabold text-sm uppercase tracking-wider shadow-2xl transition-all hover:scale-105 active:scale-95"
+              className="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-[#F7941D] to-[#E91E63] hover:opacity-95 text-white font-extrabold text-sm uppercase tracking-wider shadow-2xl transition-all hover:scale-105 active:scale-95 hover:shadow-orange-500/25"
             >
               Plan Your Trip Now
             </button>
 
             <a
               href="#featured-packages"
-              className="w-full sm:w-auto px-8 py-4 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-bold text-sm border border-white/30 transition-all hover:scale-105 flex items-center justify-center gap-2"
+              className="w-full sm:w-auto px-8 py-4 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-bold text-sm border border-white/30 transition-all hover:scale-105 flex items-center justify-center gap-2 shadow-lg"
             >
               Explore Packages <ArrowRight className="w-4 h-4 text-[#F7941D]" />
             </a>
           </div>
 
-          {/* Key Stat Pills */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 max-w-4xl mx-auto text-left">
-            <div className="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/10">
-              <span className="text-2xl font-extrabold text-[#F7941D]">100%</span>
+          {/* Key Stat Pills with Hover Lift */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 max-w-4xl mx-auto text-left animate-fade-in-up animation-delay-300">
+            <div className="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/15 hover-lift transition-all duration-300 hover:bg-white/20 hover:border-white/30 group">
+              <span className="text-2xl font-extrabold text-[#F7941D] group-hover:scale-105 transition-transform inline-block">100%</span>
               <span className="text-xs text-gray-300 block font-medium">Customized Plans</span>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/10">
-              <span className="text-2xl font-extrabold text-[#E91E63]">24/7</span>
+            <div className="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/15 hover-lift transition-all duration-300 hover:bg-white/20 hover:border-white/30 group">
+              <span className="text-2xl font-extrabold text-[#E91E63] group-hover:scale-105 transition-transform inline-block">24/7</span>
               <span className="text-xs text-gray-300 block font-medium">Travel Assistance</span>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/10">
-              <span className="text-2xl font-extrabold text-[#F7941D]">Best</span>
+            <div className="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/15 hover-lift transition-all duration-300 hover:bg-white/20 hover:border-white/30 group">
+              <span className="text-2xl font-extrabold text-[#F7941D] group-hover:scale-105 transition-transform inline-block">Best</span>
               <span className="text-xs text-gray-300 block font-medium">Price Guarantee</span>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/10">
-              <span className="text-2xl font-extrabold text-emerald-400">4.9★</span>
+            <div className="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/15 hover-lift transition-all duration-300 hover:bg-white/20 hover:border-white/30 group">
+              <span className="text-2xl font-extrabold text-emerald-400 group-hover:scale-105 transition-transform inline-block">4.9★</span>
               <span className="text-xs text-gray-300 block font-medium">Google Rating</span>
             </div>
           </div>
