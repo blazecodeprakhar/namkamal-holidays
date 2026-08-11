@@ -15,18 +15,23 @@ export const Footer: React.FC = () => {
           
           {/* Col 1: Brand & Founder */}
           <div>
-            <div className="inline-flex items-center gap-3.5 mb-5 bg-white p-3.5 px-5 rounded-2xl shadow-lg border border-white/20">
+            <Link 
+              to="/" 
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="inline-flex items-center gap-3.5 mb-5 bg-white p-3.5 px-5 rounded-2xl shadow-lg border border-white/20 hover:scale-105 transition-all duration-300 cursor-pointer group"
+              title="Back to Top Hero Section"
+            >
               <img 
                 src={logoIcon} 
                 alt="Namkamal Holidays Icon" 
-                className="h-12 sm:h-14 w-auto object-contain shrink-0" 
+                className="h-12 sm:h-14 w-auto object-contain shrink-0 group-hover:scale-105 transition-transform" 
               />
               <img 
                 src={logoText} 
                 alt="Namkamal Holidays™" 
                 className="h-10 sm:h-12 w-auto object-contain shrink-0" 
               />
-            </div>
+            </Link>
 
             <p className="text-xs text-gray-400 leading-relaxed mb-4">
               Namkamal Holidays is your dedicated travel partner offering domestic and international tour packages, customized itineraries, honeymoon getaways, and seamless travel assistance at unbeatable prices.
