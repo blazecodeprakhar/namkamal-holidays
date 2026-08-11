@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Phone, MessageSquare, Menu, X, ChevronDown, Globe, MapPin } from 'lucide-react';
+import { Phone, MessageSquare, Menu, X, ChevronDown, Globe, MapPin, Sparkles } from 'lucide-react';
 import { COMPANY_INFO } from '../data/companyData';
 import { DOMESTIC_DESTINATIONS, INTERNATIONAL_DESTINATIONS } from '../data/destinations';
 
@@ -16,6 +16,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [domesticDropdown, setDomesticDropdown] = useState(false);
   const [intDropdown, setIntDropdown] = useState(false);
+
+  const [mobileDomesticOpen, setMobileDomesticOpen] = useState(true);
+  const [mobileIntOpen, setMobileIntOpen] = useState(true);
+
   const location = useLocation();
 
   useEffect(() => {
@@ -30,12 +34,20 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close menus on route change
+  // Close menus on route change & prevent scroll when mobile menu open
   useEffect(() => {
     setMobileMenuOpen(false);
     setDomesticDropdown(false);
     setIntDropdown(false);
   }, [location.pathname]);
+
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [mobileMenuOpen]);
 
   const isActive = (path: string) => location.pathname === path;
 
@@ -204,7 +216,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
               href={`https://wa.me/${COMPANY_INFO.rawPhone}?text=Hello%20Namkamal%20Holidays,%20I%20am%20interested%20in%20planning%20a%20tour.`} 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-emerald-600 bg-emerald-50 hover:bg-emerald-100 px-3.5 py-2 rounded-full font-semibold text-xs border border-emerald-200 transition-all hover:scale-105 whitespace-nowrap"
+              className="flex items-center gap-1.5 text-emerald-600 bg-emerald-50 hover:bg-emerald-100 px-3.5 py-2 rounded-full font-semibold text-xs border border-emerald-200 transition-all hover:scale-105 active:scale-95 whitespace-nowrap shadow-sm hover:shadow-md"
             >
               <MessageSquare className="w-4 h-4 fill-emerald-600 text-emerald-600" /> WhatsApp
             </a>
@@ -217,111 +229,215 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
             </button>
           </div>
 
-          {/* Mobile Hamburger Button */}
+          {/* Mobile Hamburger Button Controls */}
           <div className="flex lg:hidden items-center gap-2">
             <button 
               onClick={() => onOpenEnquiry()}
-              className="bg-[#F7941D] text-white font-bold text-xs px-3 py-2 rounded-lg shadow"
+              className="bg-gradient-to-r from-[#F7941D] to-[#E91E63] text-white font-extrabold text-xs px-3.5 py-2 rounded-full shadow-md active:scale-95 transition-all"
             >
               Plan Trip
             </button>
 
             <button 
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg bg-gray-100 text-gray-700 hover:text-[#F7941D] focus:outline-none"
+              className="p-2.5 rounded-full bg-gray-100 text-gray-800 hover:text-[#F7941D] hover:bg-orange-50 focus:outline-none transition-all duration-300 active:scale-90"
               aria-label="Toggle Navigation Menu"
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              <div className={`transition-transform duration-300 ${mobileMenuOpen ? 'rotate-90' : 'rotate-0'}`}>
+                {mobileMenuOpen ? <X className="w-6 h-6 text-[#E91E63]" /> : <Menu className="w-6 h-6 text-gray-800" />}
+              </div>
             </button>
           </div>
 
         </div>
       </div>
 
-      {/* Mobile Drawer Menu */}
-      {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-[70px] bg-white border-b border-gray-200 shadow-2xl z-50 p-5 max-h-[calc(100vh-80px)] overflow-y-auto animate-in slide-in-from-top duration-300">
-          <div className="flex flex-col gap-3 font-semibold text-gray-800">
-            <Link to="/" className="py-2.5 px-3 rounded-lg bg-gray-50 hover:bg-orange-50 hover:text-[#F7941D]">
-              Home
-            </Link>
+      {/* Mobile Backdrop Overlay */}
+      <div 
+        className={`lg:hidden fixed inset-0 bg-black/65 backdrop-blur-sm z-50 transition-opacity duration-300 ${
+          mobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        }`}
+        onClick={() => setMobileMenuOpen(false)}
+      />
 
-            <Link to="/about" className="py-2.5 px-3 rounded-lg bg-gray-50 hover:bg-orange-50 hover:text-[#F7941D]">
-              About Us
-            </Link>
+      {/* Mobile Drawer Menu - Sliding From Right Side */}
+      <div 
+        className={`lg:hidden fixed top-0 right-0 h-full w-[85vw] sm:w-[380px] max-w-full bg-white z-50 flex flex-col justify-between shadow-2xl transition-transform duration-300 ease-out transform ${
+          mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}
+      >
+        {/* Drawer Header */}
+        <div className="p-4 border-b border-gray-100 flex items-center justify-between bg-gray-50/80">
+          <div className="flex items-center gap-2">
+            <img src={logoIcon} alt="Namkamal Lotus" className="h-9 w-auto object-contain" />
+            <img src={logoText} alt="Namkamal Holidays" className="h-7 w-auto object-contain" />
+          </div>
 
-            {/* Mobile Domestic Section */}
-            <div className="bg-orange-50/50 p-3 rounded-xl border border-orange-100">
-              <div className="flex items-center justify-between text-[#F7941D] font-bold text-xs uppercase tracking-wider mb-2">
-                <span>Top India Packages</span>
-                <Link to="/destinations/domestic" className="underline text-[11px]">View All</Link>
-              </div>
-              <div className="grid grid-cols-2 gap-2">
+          <button 
+            onClick={() => setMobileMenuOpen(false)}
+            className="p-2 rounded-full bg-white border border-gray-200 text-gray-600 hover:text-[#E91E63] hover:border-pink-200 transition-all shadow-sm active:scale-90"
+            aria-label="Close Menu"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        </div>
+
+        {/* Drawer Body - Nav Items with Staggered Animations & Accordions */}
+        <div className="p-5 flex-1 overflow-y-auto space-y-4">
+          
+          <Link 
+            to="/" 
+            onClick={() => setMobileMenuOpen(false)}
+            className={`flex items-center justify-between p-3 rounded-2xl font-bold text-sm transition-all ${
+              isActive('/') ? 'bg-orange-50 text-[#F7941D] border border-orange-100 shadow-sm' : 'bg-gray-50 text-gray-800 hover:bg-orange-50 hover:text-[#F7941D]'
+            }`}
+          >
+            <span>Home</span>
+            <span className="text-xs text-[#F7941D]">→</span>
+          </Link>
+
+          <Link 
+            to="/about" 
+            onClick={() => setMobileMenuOpen(false)}
+            className={`flex items-center justify-between p-3 rounded-2xl font-bold text-sm transition-all ${
+              isActive('/about') ? 'bg-orange-50 text-[#F7941D] border border-orange-100 shadow-sm' : 'bg-gray-50 text-gray-800 hover:bg-orange-50 hover:text-[#F7941D]'
+            }`}
+          >
+            <span>About Us</span>
+            <span className="text-xs text-[#F7941D]">→</span>
+          </Link>
+
+          {/* India Tours Accordion */}
+          <div className="bg-orange-50/60 rounded-2xl border border-orange-100 overflow-hidden">
+            <button 
+              onClick={() => setMobileDomesticOpen(!mobileDomesticOpen)}
+              className="w-full flex items-center justify-between p-3.5 font-extrabold text-xs uppercase tracking-wider text-[#F7941D]"
+            >
+              <span className="flex items-center gap-1.5">
+                <MapPin className="w-4 h-4" /> Top India Packages
+              </span>
+              <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${mobileDomesticOpen ? 'rotate-180' : ''}`} />
+            </button>
+
+            {mobileDomesticOpen && (
+              <div className="p-3 pt-0 grid grid-cols-2 gap-2 animate-fade-in-down duration-200">
                 {DOMESTIC_DESTINATIONS.map(d => (
                   <Link 
                     key={d.id} 
                     to={`/destinations/domestic/${d.id}`}
-                    className="text-xs bg-white p-2 rounded-lg shadow-sm border border-gray-100 font-medium text-gray-800 hover:text-[#F7941D]"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="text-xs bg-white p-2.5 rounded-xl shadow-sm border border-gray-100 font-semibold text-gray-800 hover:text-[#F7941D] transition-colors flex flex-col gap-0.5"
                   >
-                    {d.name}
+                    <span>{d.name}</span>
+                    <span className="text-[10px] font-bold text-[#F7941D]">{d.startingPrice}</span>
                   </Link>
                 ))}
+                <Link 
+                  to="/destinations/domestic"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="col-span-2 text-center text-xs font-bold text-[#F7941D] underline pt-1"
+                >
+                  View All 6 India Destinations →
+                </Link>
               </div>
-            </div>
+            )}
+          </div>
 
-            {/* Mobile International Section */}
-            <div className="bg-pink-50/50 p-3 rounded-xl border border-pink-100">
-              <div className="flex items-center justify-between text-[#E91E63] font-bold text-xs uppercase tracking-wider mb-2">
-                <span>Top International Packages</span>
-                <Link to="/destinations/international" className="underline text-[11px]">View All</Link>
-              </div>
-              <div className="grid grid-cols-2 gap-2">
+          {/* International Vacations Accordion */}
+          <div className="bg-pink-50/60 rounded-2xl border border-pink-100 overflow-hidden">
+            <button 
+              onClick={() => setMobileIntOpen(!mobileIntOpen)}
+              className="w-full flex items-center justify-between p-3.5 font-extrabold text-xs uppercase tracking-wider text-[#E91E63]"
+            >
+              <span className="flex items-center gap-1.5">
+                <Globe className="w-4 h-4" /> Global Vacations
+              </span>
+              <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${mobileIntOpen ? 'rotate-180' : ''}`} />
+            </button>
+
+            {mobileIntOpen && (
+              <div className="p-3 pt-0 grid grid-cols-2 gap-2 animate-fade-in-down duration-200">
                 {INTERNATIONAL_DESTINATIONS.map(d => (
                   <Link 
                     key={d.id} 
                     to={`/destinations/international/${d.id}`}
-                    className="text-xs bg-white p-2 rounded-lg shadow-sm border border-gray-100 font-medium text-gray-800 hover:text-[#E91E63]"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="text-xs bg-white p-2.5 rounded-xl shadow-sm border border-gray-100 font-semibold text-gray-800 hover:text-[#E91E63] transition-colors flex flex-col gap-0.5"
                   >
-                    {d.name}
+                    <span>{d.name}</span>
+                    <span className="text-[10px] font-bold text-[#E91E63]">{d.startingPrice}</span>
                   </Link>
                 ))}
+                <Link 
+                  to="/destinations/international"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="col-span-2 text-center text-xs font-bold text-[#E91E63] underline pt-1"
+                >
+                  View All International Packages →
+                </Link>
               </div>
-            </div>
-
-            <Link to="/services" className="py-2.5 px-3 rounded-lg bg-gray-50 hover:bg-orange-50 hover:text-[#F7941D]">
-              Services
-            </Link>
-
-            <Link to="/reviews" className="py-2.5 px-3 rounded-lg bg-gray-50 hover:bg-orange-50 hover:text-[#F7941D]">
-              Customer Reviews
-            </Link>
-
-            <Link to="/contact" className="py-2.5 px-3 rounded-lg bg-gray-50 hover:bg-orange-50 hover:text-[#F7941D]">
-              Contact Us
-            </Link>
-
-            {/* Mobile Action Buttons */}
-            <div className="pt-3 border-t border-gray-100 flex flex-col gap-2.5 mt-2">
-              <a 
-                href={`tel:${COMPANY_INFO.rawPhone}`} 
-                className="w-full py-3 bg-gray-900 text-white rounded-xl font-bold flex items-center justify-center gap-2 text-sm"
-              >
-                <Phone className="w-4 h-4 text-[#F7941D]" /> Call {COMPANY_INFO.phone}
-              </a>
-
-              <a 
-                href={`https://wa.me/${COMPANY_INFO.rawPhone}?text=Hello%20Namkamal%20Holidays`} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="w-full py-3 bg-emerald-500 text-white rounded-xl font-bold flex items-center justify-center gap-2 text-sm shadow-md"
-              >
-                <MessageSquare className="w-4 h-4 fill-white" /> WhatsApp Us Now
-              </a>
-            </div>
-
+            )}
           </div>
+
+          <Link 
+            to="/services" 
+            onClick={() => setMobileMenuOpen(false)}
+            className={`flex items-center justify-between p-3 rounded-2xl font-bold text-sm transition-all ${
+              isActive('/services') ? 'bg-orange-50 text-[#F7941D] border border-orange-100 shadow-sm' : 'bg-gray-50 text-gray-800 hover:bg-orange-50 hover:text-[#F7941D]'
+            }`}
+          >
+            <span>All 13 Travel Services</span>
+            <span className="text-xs text-[#F7941D]">→</span>
+          </Link>
+
+          <Link 
+            to="/reviews" 
+            onClick={() => setMobileMenuOpen(false)}
+            className={`flex items-center justify-between p-3 rounded-2xl font-bold text-sm transition-all ${
+              isActive('/reviews') ? 'bg-orange-50 text-[#F7941D] border border-orange-100 shadow-sm' : 'bg-gray-50 text-gray-800 hover:bg-orange-50 hover:text-[#F7941D]'
+            }`}
+          >
+            <span>Customer Reviews (4.9★)</span>
+            <span className="text-xs text-[#F7941D]">→</span>
+          </Link>
+
+          <Link 
+            to="/contact" 
+            onClick={() => setMobileMenuOpen(false)}
+            className={`flex items-center justify-between p-3 rounded-2xl font-bold text-sm transition-all ${
+              isActive('/contact') ? 'bg-orange-50 text-[#F7941D] border border-orange-100 shadow-sm' : 'bg-gray-50 text-gray-800 hover:bg-orange-50 hover:text-[#F7941D]'
+            }`}
+          >
+            <span>Contact Head Office</span>
+            <span className="text-xs text-[#F7941D]">→</span>
+          </Link>
+
         </div>
-      )}
+
+        {/* Drawer Footer - Action Buttons */}
+        <div className="p-4 border-t border-gray-100 bg-gray-50/80 space-y-2.5">
+          <a 
+            href={`https://wa.me/${COMPANY_INFO.rawPhone}?text=Hello%20Namkamal%20Holidays,%20I%20am%20interested%20in%20planning%20a%20tour.`} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="w-full py-3.5 bg-emerald-500 hover:bg-emerald-600 text-white rounded-2xl font-bold text-xs flex items-center justify-center gap-2 shadow-md active:scale-95 transition-all"
+          >
+            <MessageSquare className="w-4 h-4 fill-white" /> WhatsApp Support
+          </a>
+
+          <button 
+            onClick={() => {
+              setMobileMenuOpen(false);
+              onOpenEnquiry();
+            }}
+            className="w-full py-3.5 bg-gradient-to-r from-[#F7941D] to-[#E91E63] text-white rounded-2xl font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-md active:scale-95 transition-all"
+          >
+            <Sparkles className="w-4 h-4" /> Plan Customized Trip
+          </button>
+        </div>
+
+      </div>
+
     </header>
   );
 };
