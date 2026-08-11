@@ -39,6 +39,20 @@ export const Footer: React.FC = () => {
               </span>
             </div>
 
+            {/* In-Footer WhatsApp Quick Quote Button */}
+            <a
+              href={`https://wa.me/${COMPANY_INFO.rawPhone}?text=Hello%20Namkamal%20Holidays,%20I%20want%20to%20inquire%20about%20a%20holiday%20package.`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white py-2.5 px-5 rounded-full shadow-lg border-2 border-white/20 transition-all duration-300 hover:scale-105 mb-4 group"
+            >
+              <MessageSquare className="w-5 h-5 fill-white text-white shrink-0 group-hover:animate-bounce" />
+              <div className="flex flex-col text-left">
+                <span className="text-[10px] font-medium leading-none text-emerald-100">Need Quick Quote?</span>
+                <span className="text-xs font-extrabold leading-tight">Chat on WhatsApp</span>
+              </div>
+            </a>
+
             {/* Social Media Channels */}
             <div className="flex items-center gap-2.5">
               <a 
