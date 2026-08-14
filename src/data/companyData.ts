@@ -135,5 +135,11 @@ export const SERVICES_LIST: ServiceItem[] = [
     title: "Cruise Booking",
     description: "Unforgettable ocean and river cruise holidays in Singapore, Dubai, Europe, and domestic waters.",
     iconName: "Anchor"
+  },
+  {
+    id: "forex-exchange",
+    title: "Forex Exchange",
+    description: "Best currency exchange rates for international travel with multi-currency forex cards, cash currency exchange, and wire transfer assistance.",
+    iconName: "Banknote"
   }
 ];

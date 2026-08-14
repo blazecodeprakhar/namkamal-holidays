@@ -27,8 +27,8 @@ export const ScrollReveal: React.FC<ScrollRevealProps> = ({
         });
       },
       {
-        threshold: 0.12,
-        rootMargin: '0px 0px -40px 0px',
+        threshold: 0.05,
+        rootMargin: '0px 0px 50px 0px',
       }
     );
 
@@ -44,19 +44,22 @@ export const ScrollReveal: React.FC<ScrollRevealProps> = ({
     };
   }, []);
 
+  // Cap max delay to 120ms so animations feel instant & crisp
+  const cappedDelay = Math.min(delay, 120);
+
   const getInitialStyle = () => {
     switch (direction) {
       case 'down':
-        return 'opacity-0 -translate-y-10';
+        return 'opacity-0 -translate-y-4';
       case 'left':
-        return 'opacity-0 -translate-x-10';
+        return 'opacity-0 -translate-x-4';
       case 'right':
-        return 'opacity-0 translate-x-10';
+        return 'opacity-0 translate-x-4';
       case 'zoom':
         return 'opacity-0 scale-95';
       case 'up':
       default:
-        return 'opacity-0 translate-y-10';
+        return 'opacity-0 translate-y-4';
     }
   };
 
@@ -76,8 +79,8 @@ export const ScrollReveal: React.FC<ScrollRevealProps> = ({
   return (
     <div
       ref={domRef}
-      style={{ transitionDelay: `${delay}ms` }}
-      className={`transition-all duration-700 ease-out ${
+      style={{ transitionDelay: `${cappedDelay}ms` }}
+      className={`transition-all duration-300 ease-out transform-gpu will-change-transform ${
         isVisible ? getVisibleStyle() : getInitialStyle()
       } ${className}`}
     >

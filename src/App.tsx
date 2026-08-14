@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { EnquiryModal } from './components/EnquiryModal';
@@ -63,7 +63,6 @@ export function App() {
             {/* Destination Hubs */}
             <Route path="/destinations/domestic" element={<DomesticHubPage onOpenEnquiry={handleOpenEnquiry} />} />
             <Route path="/destinations/international" element={<InternationalHubPage onOpenEnquiry={handleOpenEnquiry} />} />
-            <Route path="/destinations/:category/:id text" element={<DestinationDetailPage onOpenEnquiry={handleOpenEnquiry} />} />
             <Route path="/destinations/:category/:id" element={<DestinationDetailPage onOpenEnquiry={handleOpenEnquiry} />} />
             
             {/* Package Details */}
@@ -80,6 +79,9 @@ export function App() {
             <Route path="/cancellation-refund-policy" element={<LegalPage />} />
             <Route path="/travel-booking-terms" element={<LegalPage />} />
             <Route path="/disclaimer" element={<LegalPage />} />
+
+            {/* Catch-all: redirect unknown routes to homepage */}
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </main>
 

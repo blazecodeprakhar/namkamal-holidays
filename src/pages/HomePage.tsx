@@ -27,23 +27,23 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenEnquiry }) => {
 
       {/* Hero Section */}
       <section className="relative min-h-[85vh] flex items-center justify-center text-white overflow-hidden bg-gray-950">
-        {/* Animated Background Image */}
+        {/* Background Image */}
         <img 
           src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=85" 
           alt="Namkamal Holidays Travel World"
-          className="absolute inset-0 w-full h-full object-cover opacity-50 scale-105 transition-transform duration-[15000ms] ease-out hover:scale-115"
+          className="absolute inset-0 w-full h-full object-cover opacity-45 transform-gpu"
         />
         
-        {/* Ambient Gradient Overlays & Glowing Light Orbs */}
+        {/* Ambient Gradient Overlays & Light Glow */}
         <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/40 to-black/30" />
-        <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-[650px] h-[650px] bg-gradient-to-tr from-[#F7941D]/25 to-[#E91E63]/25 rounded-full blur-3xl animate-pulse-glow pointer-events-none" />
-        <div className="absolute bottom-10 right-10 w-96 h-96 bg-emerald-500/15 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-[650px] h-[650px] bg-gradient-to-tr from-[#F7941D]/20 to-[#E91E63]/20 rounded-full blur-3xl opacity-70 pointer-events-none" />
+        <div className="absolute bottom-10 right-10 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-20 z-10">
           
-          {/* Floating Trust Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#F7941D] text-xs sm:text-sm font-bold uppercase tracking-widest mb-6 shadow-2xl animate-float">
-            <ShieldCheck className="w-4 h-4 text-emerald-400" /> OFFICIAL WEBSITE • NAMKAMAL HOLIDAYS™
+          {/* Floating Savings Badge */}
+          <div className="inline-flex items-center gap-2 px-4.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#F7941D] text-xs sm:text-sm font-bold uppercase tracking-widest mb-6 shadow-2xl animate-float">
+            <ShieldCheck className="w-4 h-4 text-emerald-400" /> Save More on Your Holidays
           </div>
 
           {/* Hero Heading */}
@@ -122,7 +122,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenEnquiry }) => {
             {featuredPackages.map((pkg, idx) => (
               <ScrollReveal 
                 key={pkg.id} 
-                delay={idx * 150} 
+                delay={idx * 40} 
                 direction="up" 
                 className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.35rem)] max-w-md"
               >
@@ -154,7 +154,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenEnquiry }) => {
             {DOMESTIC_DESTINATIONS.map((dest, idx) => (
               <ScrollReveal 
                 key={dest.id} 
-                delay={idx * 100} 
+                delay={idx * 40} 
                 direction="up" 
                 className="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)] max-w-sm"
               >
@@ -189,7 +189,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenEnquiry }) => {
             {INTERNATIONAL_DESTINATIONS.map((dest, idx) => (
               <ScrollReveal 
                 key={dest.id} 
-                delay={idx * 100} 
+                delay={idx * 40} 
                 direction="up" 
                 className="w-full sm:w-[calc(50%-0.75rem)] lg:w-[calc(33.333%-1rem)] max-w-sm"
               >
@@ -216,7 +216,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenEnquiry }) => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {COMPANY_INFO.whyChooseUs.map((item, idx) => (
-              <ScrollReveal key={idx} delay={idx * 120} direction="up">
+              <ScrollReveal key={idx} delay={idx * 40} direction="up">
                 <div className="bg-gray-50 p-6 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover-lift transition-all duration-300 group h-full">
                   <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-[#F7941D] to-[#E91E63] text-white flex items-center justify-center mb-6 shadow-md group-hover:scale-110 transition-transform duration-300">
                     {idx === 0 && <Compass className="w-7 h-7" />}
@@ -247,7 +247,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenEnquiry }) => {
                 </h2>
               </div>
               <Link to="/services" className="text-xs font-bold text-[#F7941D] hover:underline flex items-center gap-1 mt-2 md:mt-0">
-                View All 13 Services Detailed →
+                View All Travel Services Detailed →
               </Link>
             </div>
           </ScrollReveal>
@@ -289,7 +289,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenEnquiry }) => {
             {CUSTOMER_REVIEWS.slice(0, 3).map((rev, idx) => (
               <ScrollReveal 
                 key={rev.id} 
-                delay={idx * 150} 
+                delay={idx * 40} 
                 direction="up" 
                 className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.35rem)] max-w-md"
               >
@@ -330,73 +330,84 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenEnquiry }) => {
         </div>
       </section>
 
-      {/* Social Media Strip */}
-      <section className="py-12 bg-gray-900 text-white border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
-          <div>
-            <h3 className="text-lg font-bold text-white mb-1">Follow Namkamal Holidays On Social Media</h3>
-            <p className="text-xs text-gray-400">Stay updated with latest package deals, travel photos & holiday videos.</p>
+      {/* Premium CTA & Social Section (Seamless Dark Transition) */}
+      <section className="relative py-20 bg-gradient-to-b from-gray-900 via-gray-950 to-gray-950 text-white overflow-hidden border-t border-gray-800/80">
+        {/* Ambient Glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-gradient-to-r from-[#F7941D]/15 via-amber-500/10 to-[#E91E63]/15 blur-3xl pointer-events-none rounded-full" />
+
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8 z-10">
+          
+          <ScrollReveal direction="up" className="space-y-4">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md text-xs font-bold text-[#F7941D] uppercase tracking-widest">
+              ✨ START YOUR ADVENTURE • FREE CONSULTATION
+            </div>
+
+            <h2 className="text-3xl sm:text-5xl font-black tracking-tight text-white leading-tight">
+              Ready to Plan Your <span className="bg-gradient-to-r from-[#F7941D] via-amber-300 to-[#E91E63] bg-clip-text text-transparent">Next Vacation?</span>
+            </h2>
+            
+            <p className="text-sm sm:text-base text-gray-300 max-w-2xl mx-auto font-medium leading-relaxed">
+              Contact <strong className="text-white">Mr. Shubham Bomble</strong> and the team at Namkamal Holidays today for customized itineraries and instant best price quotes!
+            </p>
+
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-3">
+              <button
+                onClick={() => onOpenEnquiry()}
+                className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-[#F7941D] to-[#E91E63] hover:opacity-95 text-white font-extrabold text-xs uppercase tracking-wider rounded-full shadow-xl transition-all hover:scale-105 active:scale-95"
+              >
+                Send Free Enquiry Now
+              </button>
+
+              <a
+                href={`https://wa.me/${COMPANY_INFO.rawPhone}?text=Hello%20Namkamal%20Holidays`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto px-8 py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-extrabold text-xs rounded-full shadow-xl flex items-center justify-center gap-2 transition-all hover:scale-105 active:scale-95"
+              >
+                <MessageSquare className="w-4 h-4 fill-white" /> WhatsApp +91 95453 99825
+              </a>
+            </div>
+          </ScrollReveal>
+
+          {/* Social Media Strip */}
+          <div className="pt-8 border-t border-gray-800/80 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+            <div>
+              <h3 className="text-sm font-bold text-white mb-0.5">Follow Namkamal Holidays On Social Media</h3>
+              <p className="text-xs text-gray-400">Stay updated with latest package deals, travel photos & holiday videos.</p>
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-2.5">
+              <a 
+                href={COMPANY_INFO.socials.instagram} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="px-4 py-2 bg-gray-900 border border-gray-800 hover:border-pink-500/50 text-gray-200 hover:text-white rounded-full font-bold text-xs flex items-center gap-2 shadow-sm hover:scale-105 transition-all"
+              >
+                <span className="w-2 h-2 rounded-full bg-pink-500" /> Instagram @namkamal_holidays
+              </a>
+
+              <a 
+                href={COMPANY_INFO.socials.youtube} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="px-4 py-2 bg-gray-900 border border-gray-800 hover:border-red-500/50 text-gray-200 hover:text-white rounded-full font-bold text-xs flex items-center gap-2 shadow-sm hover:scale-105 transition-all"
+              >
+                <span className="w-2 h-2 rounded-full bg-red-500" /> YouTube Channel
+              </a>
+
+              <a 
+                href={COMPANY_INFO.socials.facebook} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="px-4 py-2 bg-gray-900 border border-gray-800 hover:border-blue-500/50 text-gray-200 hover:text-white rounded-full font-bold text-xs flex items-center gap-2 shadow-sm hover:scale-105 transition-all"
+              >
+                <span className="w-2 h-2 rounded-full bg-blue-500" /> Facebook Page
+              </a>
+            </div>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-3">
-            <a 
-              href={COMPANY_INFO.socials.instagram} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl font-bold text-xs flex items-center gap-2 shadow hover:scale-105 transition-transform"
-            >
-              Instagram @namkamal_holidays
-            </a>
-
-            <a 
-              href={COMPANY_INFO.socials.youtube} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="px-4 py-2 bg-red-600 text-white rounded-xl font-bold text-xs flex items-center gap-2 shadow hover:scale-105 transition-transform"
-            >
-              YouTube Channel
-            </a>
-
-            <a 
-              href={COMPANY_INFO.socials.facebook} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="px-4 py-2 bg-blue-600 text-white rounded-xl font-bold text-xs flex items-center gap-2 shadow hover:scale-105 transition-transform"
-            >
-              Facebook Page
-            </a>
-          </div>
         </div>
-      </section>
-
-      {/* Final Enquiry Banner */}
-      <section className="py-16 bg-gradient-to-r from-[#F7941D] to-[#E91E63] text-white">
-        <ScrollReveal direction="up" className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight mb-4">
-            Ready to Plan Your Next Vacation?
-          </h2>
-          <p className="text-sm sm:text-base text-white/90 max-w-2xl mx-auto mb-8 font-medium">
-            Contact Mr. Shubham Bomble and the team at Namkamal Holidays today for customized itineraries and instant best price quotes!
-          </p>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button
-              onClick={() => onOpenEnquiry()}
-              className="w-full sm:w-auto px-8 py-4 bg-white text-gray-900 hover:bg-gray-100 font-extrabold text-xs uppercase tracking-wider rounded-full shadow-2xl transition-all hover:scale-105 active:scale-95"
-            >
-              Send Free Enquiry Now
-            </button>
-
-            <a
-              href={`https://wa.me/${COMPANY_INFO.rawPhone}?text=Hello%20Namkamal%20Holidays`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto px-8 py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs rounded-full shadow-xl flex items-center justify-center gap-2 transition-all hover:scale-105 active:scale-95"
-            >
-              <MessageSquare className="w-4 h-4 fill-white" /> WhatsApp +91 95453 99825
-            </a>
-          </div>
-        </ScrollReveal>
       </section>
 
     </div>

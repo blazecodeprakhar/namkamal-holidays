@@ -83,7 +83,11 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
         <div className="flex items-center justify-between gap-4">
           
           {/* Brand Logo & Tagline Using Assets */}
-          <Link to="/" className="flex items-center gap-2.5 group shrink-0 py-0.5">
+          <Link 
+            to="/" 
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="flex items-center gap-2.5 group shrink-0 py-0.5 cursor-pointer"
+          >
             <img 
               src={logoIcon} 
               alt="Namkamal Holidays Icon" 
@@ -268,10 +272,17 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
       >
         {/* Drawer Header */}
         <div className="p-4 border-b border-gray-100 flex items-center justify-between bg-gray-50/80">
-          <div className="flex items-center gap-2">
+          <Link 
+            to="/"
+            onClick={() => {
+              setMobileMenuOpen(false);
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            className="flex items-center gap-2 cursor-pointer"
+          >
             <img src={logoIcon} alt="Namkamal Lotus" className="h-9 w-auto object-contain" />
             <img src={logoText} alt="Namkamal Holidays" className="h-7 w-auto object-contain" />
-          </div>
+          </Link>
 
           <button 
             onClick={() => setMobileMenuOpen(false)}

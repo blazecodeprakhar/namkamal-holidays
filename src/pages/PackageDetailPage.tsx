@@ -117,30 +117,62 @@ export const PackageDetailPage: React.FC<PackageDetailPageProps> = ({ onOpenEnqu
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-2xl font-extrabold text-gray-900">Day-Wise Detailed Itinerary</h3>
-                  <span className="text-xs font-bold text-gray-500">{pkg.durationDays} Days Circuit</span>
+                  <span className="text-xs font-extrabold text-[#E91E63] bg-pink-50 px-3.5 py-1.5 rounded-full border border-pink-100">{pkg.durationDays} Days Circuit</span>
                 </div>
 
-                <div className="space-y-3">
+                <div className="space-y-3.5">
                   {pkg.dayWiseItinerary.map((dayItem) => {
                     const isOpen = activeDay === dayItem.day;
                     return (
-                      <div key={dayItem.day} className="border border-gray-200 rounded-2xl overflow-hidden transition-colors">
+                      <div 
+                        key={dayItem.day} 
+                        className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
+                          isOpen 
+                            ? 'border-orange-300 shadow-lg shadow-orange-500/5' 
+                            : 'border-gray-200/80 hover:border-orange-200'
+                        }`}
+                      >
                         <button
                           onClick={() => setActiveDay(isOpen ? null : dayItem.day)}
-                          className="w-full p-4 bg-gray-50 hover:bg-gray-100 flex items-center justify-between text-left transition-colors"
+                          className={`w-full p-4 sm:p-5 flex items-center justify-between text-left transition-all duration-300 ${
+                            isOpen 
+                              ? 'bg-gradient-to-r from-orange-50/90 via-amber-50/50 to-white' 
+                              : 'bg-gray-50/70 hover:bg-orange-50/30'
+                          }`}
                         >
-                          <div className="flex items-center gap-3">
-                            <span className="w-9 h-9 rounded-xl bg-gray-900 text-[#F7941D] font-extrabold text-xs flex items-center justify-center shrink-0">
+                          <div className="flex items-center gap-3.5">
+                            <span className={`px-3.5 py-1.5 rounded-xl font-black text-xs sm:text-sm flex items-center justify-center shrink-0 transition-all duration-300 ${
+                              isOpen 
+                                ? 'bg-gradient-to-r from-[#F7941D] to-[#E91E63] text-white shadow-md shadow-orange-500/25' 
+                                : 'bg-gradient-to-r from-orange-500/10 to-pink-500/10 text-[#F7941D] border border-orange-200/60'
+                            }`}>
                               Day {dayItem.day}
                             </span>
-                            <span className="text-sm font-bold text-gray-900">{dayItem.title}</span>
+                            <span className={`text-sm sm:text-base font-extrabold transition-colors ${isOpen ? 'text-gray-900' : 'text-gray-800'}`}>
+                              {dayItem.title}
+                            </span>
                           </div>
-                          {isOpen ? <ChevronUp className="w-5 h-5 text-gray-600" /> : <ChevronDown className="w-5 h-5 text-gray-400" />}
+                          <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all ${
+                            isOpen 
+                              ? 'bg-gradient-to-r from-[#F7941D] to-[#E91E63] text-white shadow-sm' 
+                              : 'bg-white text-gray-400 border border-gray-200'
+                          }`}>
+                            {isOpen ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+                          </div>
                         </button>
 
                         {isOpen && (
-                          <div className="p-5 bg-white border-t border-gray-200 text-xs sm:text-sm text-gray-700 leading-relaxed">
-                            {dayItem.description}
+                          <div className="p-5 bg-white border-t border-orange-100/70 text-xs sm:text-sm text-gray-700 leading-relaxed space-y-3">
+                            <p>{dayItem.description}</p>
+                            {dayItem.activities && dayItem.activities.length > 0 && (
+                              <div className="pt-2 flex flex-wrap gap-2">
+                                {dayItem.activities.map((act, aIdx) => (
+                                  <span key={aIdx} className="px-2.5 py-1 rounded-md bg-orange-50 text-[#F7941D] text-[11px] font-semibold border border-orange-100">
+                                    • {act}
+                                  </span>
+                                ))}
+                              </div>
+                            )}
                           </div>
                         )}
                       </div>

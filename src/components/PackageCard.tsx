@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { Clock, MapPin, CheckCircle2, MessageSquare } from 'lucide-react';
 import type { Package } from '../types';
 import { COMPANY_INFO } from '../data/companyData';
@@ -10,10 +10,22 @@ interface PackageCardProps {
 }
 
 export const PackageCard: React.FC<PackageCardProps> = ({ pkg, onEnquire }) => {
+  const navigate = useNavigate();
   const whatsappMessage = encodeURIComponent(`Hello Namkamal Holidays, I am interested in booking/enquiring for: ${pkg.name} (${pkg.code}). Please share itinerary details & price quotation.`);
 
+  const handleCardClick = (e: React.MouseEvent) => {
+    // If user clicked inside an interactive button or anchor link (like Enquire Now or WhatsApp link), don't trigger card navigation
+    if ((e.target as HTMLElement).closest('button, a')) {
+      return;
+    }
+    navigate(`/packages/${pkg.id}`);
+  };
+
   return (
-    <div className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl hover-lift transition-all duration-500 border border-gray-100 flex flex-col group h-full">
+    <div 
+      onClick={handleCardClick}
+      className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl hover-lift transition-all duration-500 border border-gray-100 flex flex-col group h-full cursor-pointer"
+    >
       {/* Image Container with Badges */}
       <div className="relative aspect-[16/10] overflow-hidden bg-gray-100">
         <img 

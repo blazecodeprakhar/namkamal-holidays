@@ -9,7 +9,7 @@ import logoText from '../assets/logo_text.PNG';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#111827] text-gray-300 pt-16 pb-12 border-t-4 border-[#F7941D]">
+    <footer className="bg-gray-950 text-gray-300 pt-16 pb-12 border-t border-gray-800/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-gray-800">
           

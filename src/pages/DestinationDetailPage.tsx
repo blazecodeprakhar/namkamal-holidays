@@ -159,8 +159,8 @@ export const DestinationDetailPage: React.FC<DestinationDetailPageProps> = ({ on
 
             <div className="space-y-4">
               {samplePackage.dayWiseItinerary.map((dayItem) => (
-                <div key={dayItem.day} className="bg-gray-50 p-5 rounded-2xl border border-gray-200 flex gap-4 items-start">
-                  <span className="w-10 h-10 rounded-xl bg-gray-900 text-[#F7941D] font-extrabold text-sm flex items-center justify-center shrink-0">
+                <div key={dayItem.day} className="bg-white p-5 rounded-2xl border border-gray-200/80 shadow-sm flex gap-4 items-start hover:border-orange-200 transition-colors">
+                  <span className="px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-orange-500/10 to-pink-500/10 text-[#F7941D] border border-orange-200/60 font-black text-xs flex items-center justify-center shrink-0">
                     Day {dayItem.day}
                   </span>
                   <div>
