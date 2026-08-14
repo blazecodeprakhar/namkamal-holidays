@@ -123,7 +123,7 @@ export const DOMESTIC_DESTINATIONS: Destination[] = [
     name: "Telangana",
     category: "domestic",
     shortDesc: "City of Pearls – Charminar, Golconda Fort & World's Largest Ramoji Film City.",
-    image: "https://images.unsplash.com/photo-1605367031760-26466f272a8c?auto=format&fit=crop&w=1200&q=80",
+    image: "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=1200&q=80",
     popularPlaces: ["Charminar", "Golconda Fort", "Chowmahalla Palace", "Ramoji Film City"],
     startingPrice: "₹8,999",
     packageCount: 1

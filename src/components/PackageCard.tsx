@@ -33,6 +33,9 @@ export const PackageCard: React.FC<PackageCardProps> = ({ pkg, onEnquire }) => {
           alt={`${pkg.name} - Namkamal Holidays`}
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
           loading="lazy"
+          onError={(e) => {
+            (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=800&q=80";
+          }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20 group-hover:from-black/80 transition-colors duration-300" />
         

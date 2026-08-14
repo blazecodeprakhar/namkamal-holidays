@@ -21,6 +21,9 @@ export const DestinationCard: React.FC<DestinationCardProps> = ({ destination })
         alt={`${destination.name} Tour Packages - Namkamal Holidays`}
         className="absolute inset-0 w-full h-full object-cover group-hover:scale-115 transition-transform duration-1000 ease-out"
         loading="lazy"
+        onError={(e) => {
+          (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1200&q=80";
+        }}
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/10 group-hover:from-black/95 transition-colors duration-500" />
 
