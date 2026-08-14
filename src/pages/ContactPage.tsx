@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, Clock, MessageSquare, ExternalLink, Headphones, Send, Sparkles } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, MessageSquare, ExternalLink, Headphones } from 'lucide-react';
 import { SEOHead } from '../components/SEOHead';
 import { COMPANY_INFO } from '../data/companyData';
 import { EnquiryForm } from '../components/EnquiryForm';
