@@ -14,11 +14,11 @@ export const COMPANY_INFO = {
   workingHours: "9:00 AM – 9:00 PM (Mon - Sun)",
   
   socials: {
-    googleBusiness: "https://share.google/HBSOYIfHxQB0tBQjK",
+    googleBusiness: "https://g.page/r/CcPMdv7tLRm-EBM/review",
     instagram: "https://www.instagram.com/namkamal_holidays/",
     facebook: "https://www.facebook.com/share/1HBvsVFaCM/",
     youtube: "https://www.youtube.com/@NamkamalHolidays",
-    reviews: "https://share.google/OM4fQjvXxu8oBE98S"
+    reviews: "https://g.page/r/CcPMdv7tLRm-EBM/review"
   },
 
   aboutSummary: `Welcome to Namkamal Holidays, your gateway to unforgettable travel experiences at incredibly reasonable prices. We are a dedicated team of travel enthusiasts committed to providing you with exceptional tours and holiday packages that won't break the bank.`,
