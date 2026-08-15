@@ -45,7 +45,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onOpenEnquiry }) => 
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-black text-white leading-tight"
           >
-            <span className="block text-4xl sm:text-6xl md:text-7xl lg:text-[5.5rem] tracking-wider text-white mb-2">Our Complete</span>
+            <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white mb-1">Our Complete</span>
             <span className="bg-gradient-to-r from-[#F7941D] via-amber-300 to-[#E91E63] bg-clip-text text-transparent block text-3xl sm:text-5xl lg:text-6xl tracking-tight">Travel Services</span>
           </motion.h1>
 
