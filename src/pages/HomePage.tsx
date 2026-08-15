@@ -48,7 +48,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenEnquiry }) => {
 
           {/* Hero Heading */}
           <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-tight text-white mb-6 animate-fade-in-up">
-            Your Journey, <span className="text-brand-gradient">Our Commitment</span>
+            <span className="block">Your Journey,</span>
+            <span className="text-brand-gradient block">Our Commitment</span>
           </h1>
 
           {/* Subtitle */}

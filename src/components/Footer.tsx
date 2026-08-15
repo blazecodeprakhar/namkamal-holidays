@@ -39,7 +39,7 @@ export const Footer: React.FC = () => {
               </p>
 
               <div className="bg-gray-800/60 p-3 rounded-2xl border border-gray-700/50 mb-4">
-                <span className="text-[11px] text-gray-400 block font-medium">CEO / Founder</span>
+                <span className="text-[11px] text-gray-400 block font-medium">Founder / CEO</span>
                 <span className="text-sm font-extrabold text-white flex items-center gap-1.5 mt-0.5">
                   {COMPANY_INFO.founder}
                 </span>
