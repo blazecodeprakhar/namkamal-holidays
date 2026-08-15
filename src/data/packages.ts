@@ -1,5 +1,37 @@
 import type { Package } from '../types';
 
+// Assets for specified packages
+import ap5 from '../assets/Andrapradesh/5.jpg';
+import ap6 from '../assets/Andrapradesh/6.jpg';
+
+import gujaratImg from '../assets/Gujarat/ChatGPT Image Aug 15, 2026 at 03_28_18 PM.png';
+
+import karnataka2 from '../assets/Karnataka/2.jpg';
+import karnataka3 from '../assets/Karnataka/3.jpg';
+import karnataka4 from '../assets/Karnataka/4.jpg';
+
+import mp21 from '../assets/Mqadahypradesh/21.jpg';
+import mp22 from '../assets/Mqadahypradesh/22.jpg';
+import mp23 from '../assets/Mqadahypradesh/23.jpg';
+
+import ne25 from '../assets/North east india/25.jpg';
+import ne26 from '../assets/North east india/26.jpg';
+import ne27 from '../assets/North east india/27.jpg';
+
+import odisha14 from '../assets/Odisha/14.jpg';
+import odisha15 from '../assets/Odisha/15.jpg';
+
+import telangana7 from '../assets/Telangana/7.jpg';
+import telangana8 from '../assets/Telangana/8.jpg';
+
+import uttarakhand10 from '../assets/Uttarakhand/10.jpg';
+import uttarakhand11 from '../assets/Uttarakhand/11.jpg';
+import uttarakhand12 from '../assets/Uttarakhand/12.jpg';
+
+import wb16 from '../assets/West bengal/16.jpg';
+import wb17 from '../assets/West bengal/17.jpg';
+import wb18 from '../assets/West bengal/18.jpg';
+
 export const PACKAGES_DATA: Package[] = [
   // ==========================================
   // RAJASTHAN
@@ -537,7 +569,7 @@ export const PACKAGES_DATA: Package[] = [
     exclusions: ["Train/Flight", "Ropeway & boat tickets"],
     importantNotes: ["Attraction entry, permits, safari, boats, ropeways, cruises, special darshan and adventure activities are subject to availability, operating rules, weather and applicable charges."],
     cancellationTerms: ["As per policy."],
-    gallery: ["https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=1200&q=80"]
+    gallery: [uttarakhand10, uttarakhand11, uttarakhand12]
   },
   {
     id: "namkamal-uttarakhand-wildlife-hills",
@@ -578,7 +610,7 @@ export const PACKAGES_DATA: Package[] = [
     exclusions: ["Safari booking fee", "Flights"],
     importantNotes: ["Attraction entry, permits, safari, boats, ropeways, cruises, special darshan and adventure activities are subject to availability, operating rules, weather and applicable charges."],
     cancellationTerms: ["As per policy."],
-    gallery: ["https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=1200&q=80"]
+    gallery: [uttarakhand11, uttarakhand12, uttarakhand10]
   },
 
   // ==========================================
@@ -623,7 +655,7 @@ export const PACKAGES_DATA: Package[] = [
     exclusions: ["Flight/Train", "Monuments entrance"],
     importantNotes: ["Attraction entry, permits, safari, boats, ropeways, cruises, special darshan and adventure activities are subject to availability, operating rules, weather and applicable charges."],
     cancellationTerms: ["As per policy."],
-    gallery: ["https://images.unsplash.com/photo-1600100397608-f010e423b971?auto=format&fit=crop&w=1200&q=80"]
+    gallery: [karnataka2, karnataka3, karnataka4]
   },
   {
     id: "namkamal-coastal-karnataka",
@@ -663,7 +695,7 @@ export const PACKAGES_DATA: Package[] = [
     exclusions: ["Flight/Train", "Boat tickets"],
     importantNotes: ["Attraction entry, permits, safari, boats, ropeways, cruises, special darshan and adventure activities are subject to availability, operating rules, weather and applicable charges."],
     cancellationTerms: ["As per policy."],
-    gallery: ["https://images.unsplash.com/photo-1600100397608-f010e423b971?auto=format&fit=crop&w=1200&q=80"]
+    gallery: [karnataka3, karnataka4, karnataka2]
   },
 
   // ==========================================
@@ -973,7 +1005,7 @@ export const PACKAGES_DATA: Package[] = [
     exclusions: ["Flight/Train", "Entry fees"],
     importantNotes: ["Attraction entry, permits, safari, boats, ropeways, cruises, special darshan and adventure activities are subject to availability, operating rules, weather and applicable charges."],
     cancellationTerms: ["As per policy."],
-    gallery: ["https://images.unsplash.com/photo-1627894483216-2138af692e32?auto=format&fit=crop&w=1200&q=80"]
+    gallery: [ap5, ap6]
   },
 
   // ==========================================
@@ -1017,7 +1049,7 @@ export const PACKAGES_DATA: Package[] = [
     exclusions: ["Ramoji entry ticket", "Flights"],
     importantNotes: ["Attraction entry, permits, safari, boats, ropeways, cruises, special darshan and adventure activities are subject to availability, operating rules, weather and applicable charges."],
     cancellationTerms: ["As per policy."],
-    gallery: ["https://images.unsplash.com/photo-1605367031760-26466f272a8c?auto=format&fit=crop&w=1200&q=80"]
+    gallery: [telangana7, telangana8]
   },
 
   // ==========================================
@@ -1060,7 +1092,7 @@ export const PACKAGES_DATA: Package[] = [
     exclusions: ["Boating fees", "Flights"],
     importantNotes: ["Attraction entry, permits, safari, boats, ropeways, cruises, special darshan and adventure activities are subject to availability, operating rules, weather and applicable charges."],
     cancellationTerms: ["As per policy."],
-    gallery: ["https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80"]
+    gallery: [ne25, ne26, ne27]
   },
   {
     id: "namkamal-assam-wildlife-escape",
@@ -1096,7 +1128,7 @@ export const PACKAGES_DATA: Package[] = [
     exclusions: ["Kaziranga safari fee", "Flights"],
     importantNotes: ["Attraction entry, permits, safari, boats, ropeways, cruises, special darshan and adventure activities are subject to availability, operating rules, weather and applicable charges."],
     cancellationTerms: ["As per policy."],
-    gallery: ["https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80"]
+    gallery: [ne26, ne27, ne25]
   },
   {
     id: "namkamal-arunachal-tawang-explorer",
@@ -1137,7 +1169,7 @@ export const PACKAGES_DATA: Package[] = [
     exclusions: ["Bumla Pass Army Permit vehicle", "Flights"],
     importantNotes: ["Attraction entry, permits, safari, boats, ropeways, cruises, special darshan and adventure activities are subject to availability, operating rules, weather and applicable charges."],
     cancellationTerms: ["As per policy."],
-    gallery: ["https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80"]
+    gallery: [ne27, ne25, ne26]
   },
   {
     id: "namkamal-sikkim-darjeeling",
@@ -1178,7 +1210,7 @@ export const PACKAGES_DATA: Package[] = [
     exclusions: ["Toy train tickets", "Zero point extra charge"],
     importantNotes: ["Attraction entry, permits, safari, boats, ropeways, cruises, special darshan and adventure activities are subject to availability, operating rules, weather and applicable charges."],
     cancellationTerms: ["As per policy."],
-    gallery: ["https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80"]
+    gallery: [ne25, ne26, ne27]
   },
 
   // ==========================================
@@ -1220,7 +1252,7 @@ export const PACKAGES_DATA: Package[] = [
     exclusions: ["Chilika boat ticket", "Flights"],
     importantNotes: ["Attraction entry, permits, safari, boats, ropeways, cruises, special darshan and adventure activities are subject to availability, operating rules, weather and applicable charges."],
     cancellationTerms: ["As per policy."],
-    gallery: ["https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=1200&q=80"]
+    gallery: [odisha14, odisha15]
   },
 
   // ==========================================
@@ -1262,7 +1294,7 @@ export const PACKAGES_DATA: Package[] = [
     exclusions: ["Train/Flight", "Toy Train tickets"],
     importantNotes: ["Attraction entry, permits, safari, boats, ropeways, cruises, special darshan and adventure activities are subject to availability, operating rules, weather and applicable charges."],
     cancellationTerms: ["As per policy."],
-    gallery: ["https://images.unsplash.com/photo-1558431382-27e303142255?auto=format&fit=crop&w=1200&q=80"]
+    gallery: [wb16, wb17, wb18]
   },
   {
     id: "namkamal-sundarbans-escape",
@@ -1296,7 +1328,7 @@ export const PACKAGES_DATA: Package[] = [
     exclusions: ["Camera fees", "Personal tips"],
     importantNotes: ["Attraction entry, permits, safari, boats, ropeways, cruises, special darshan and adventure activities are subject to availability, operating rules, weather and applicable charges."],
     cancellationTerms: ["As per policy."],
-    gallery: ["https://images.unsplash.com/photo-1558431382-27e303142255?auto=format&fit=crop&w=1200&q=80"]
+    gallery: [wb17, wb18, wb16]
   },
 
   // ==========================================
@@ -1339,7 +1371,7 @@ export const PACKAGES_DATA: Package[] = [
     exclusions: ["Statue of Unity entry tickets", "Ferry charges"],
     importantNotes: ["Attraction entry, permits, safari, boats, ropeways, cruises, special darshan and adventure activities are subject to availability, operating rules, weather and applicable charges."],
     cancellationTerms: ["As per policy."],
-    gallery: ["https://images.unsplash.com/photo-1609766857041-ed402ea8069a?auto=format&fit=crop&w=1200&q=80"],
+    gallery: [gujaratImg],
     isFeatured: true
   },
   {
@@ -1381,7 +1413,7 @@ export const PACKAGES_DATA: Package[] = [
     exclusions: ["Gir safari booking", "Flights"],
     importantNotes: ["Attraction entry, permits, safari, boats, ropeways, cruises, special darshan and adventure activities are subject to availability, operating rules, weather and applicable charges."],
     cancellationTerms: ["As per policy."],
-    gallery: ["https://images.unsplash.com/photo-1609766857041-ed402ea8069a?auto=format&fit=crop&w=1200&q=80"]
+    gallery: [gujaratImg]
   },
 
   // ==========================================
@@ -1423,7 +1455,7 @@ export const PACKAGES_DATA: Package[] = [
     exclusions: ["Flight/Train", "Special Darshan tickets"],
     importantNotes: ["Attraction entry, permits, safari, boats, ropeways, cruises, special darshan and adventure activities are subject to availability, operating rules, weather and applicable charges."],
     cancellationTerms: ["As per policy."],
-    gallery: ["https://images.unsplash.com/photo-1627894483216-2138af692e32?auto=format&fit=crop&w=1200&q=80"]
+    gallery: [mp21, mp22, mp23]
   },
   {
     id: "namkamal-mp-grand-heritage",
@@ -1466,7 +1498,7 @@ export const PACKAGES_DATA: Package[] = [
     exclusions: ["Flight/Train", "Boat ride fees"],
     importantNotes: ["Attraction entry, permits, safari, boats, ropeways, cruises, special darshan and adventure activities are subject to availability, operating rules, weather and applicable charges."],
     cancellationTerms: ["As per policy."],
-    gallery: ["https://images.unsplash.com/photo-1627894483216-2138af692e32?auto=format&fit=crop&w=1200&q=80"]
+    gallery: [mp22, mp23, mp21]
   },
 
   // ==========================================

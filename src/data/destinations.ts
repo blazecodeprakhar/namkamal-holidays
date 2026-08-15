@@ -1,5 +1,15 @@
 import type { Destination } from '../types';
 
+import ap5 from '../assets/Andrapradesh/5.jpg';
+import gujaratImg from '../assets/Gujarat/ChatGPT Image Aug 15, 2026 at 03_28_18 PM.png';
+import karnataka2 from '../assets/Karnataka/2.jpg';
+import mp21 from '../assets/Mqadahypradesh/21.jpg';
+import ne25 from '../assets/North east india/25.jpg';
+import odisha14 from '../assets/Odisha/14.jpg';
+import telangana7 from '../assets/Telangana/7.jpg';
+import uttarakhand10 from '../assets/Uttarakhand/10.jpg';
+import wb16 from '../assets/West bengal/16.jpg';
+
 export const DOMESTIC_DESTINATIONS: Destination[] = [
   {
     id: "rajasthan",
@@ -39,7 +49,7 @@ export const DOMESTIC_DESTINATIONS: Destination[] = [
     name: "Uttarakhand",
     category: "domestic",
     shortDesc: "Devbhoomi Gateway – Haridwar Aarti, Rishikesh, Mussoorie & Corbett Tiger Reserve.",
-    image: "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=1200&q=80",
+    image: uttarakhand10,
     popularPlaces: ["Haridwar", "Rishikesh", "Mussoorie", "Nainital", "Jim Corbett"],
     startingPrice: "₹11,499",
     packageCount: 2,
@@ -50,7 +60,7 @@ export const DOMESTIC_DESTINATIONS: Destination[] = [
     name: "Karnataka",
     category: "domestic",
     shortDesc: "UNESCO Hampi Ruins, Mysore Palace, Coorg Coffee Estates & Coastal Shrines.",
-    image: "https://images.unsplash.com/photo-1600100397608-f010e423b971?auto=format&fit=crop&w=1200&q=80",
+    image: karnataka2,
     popularPlaces: ["Bengaluru", "Mysore", "Coorg", "Hampi", "Udupi", "Murudeshwar", "Gokarna"],
     startingPrice: "₹12,499",
     packageCount: 2
@@ -113,7 +123,7 @@ export const DOMESTIC_DESTINATIONS: Destination[] = [
     name: "Andhra Pradesh",
     category: "domestic",
     shortDesc: "Vizag Coastal Charm – RK Beach, Submarine Museum & Araku Valley Caves.",
-    image: "https://images.unsplash.com/photo-1627894483216-2138af692e32?auto=format&fit=crop&w=1200&q=80",
+    image: ap5,
     popularPlaces: ["Visakhapatnam", "RK Beach", "Kailasagiri", "Araku Valley", "Borra Caves"],
     startingPrice: "₹9,999",
     packageCount: 1
@@ -123,7 +133,7 @@ export const DOMESTIC_DESTINATIONS: Destination[] = [
     name: "Telangana",
     category: "domestic",
     shortDesc: "City of Pearls – Charminar, Golconda Fort & World's Largest Ramoji Film City.",
-    image: "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=1200&q=80",
+    image: telangana7,
     popularPlaces: ["Charminar", "Golconda Fort", "Chowmahalla Palace", "Ramoji Film City"],
     startingPrice: "₹8,999",
     packageCount: 1
@@ -133,7 +143,7 @@ export const DOMESTIC_DESTINATIONS: Destination[] = [
     name: "North East India",
     category: "domestic",
     shortDesc: "Unexplored Eastern Frontiers – Meghalaya Root Bridges, Kaziranga & Tawang.",
-    image: "https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=1200&q=80",
+    image: ne25,
     popularPlaces: ["Shillong", "Cherrapunjee", "Dawki", "Kaziranga", "Tawang", "Gangtok", "Darjeeling"],
     startingPrice: "₹15,999",
     packageCount: 4,
@@ -144,7 +154,7 @@ export const DOMESTIC_DESTINATIONS: Destination[] = [
     name: "Odisha",
     category: "domestic",
     shortDesc: "Golden Triangle Heritage – Konark Sun Temple, Jagannath Puri & Chilika Lake.",
-    image: "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=1200&q=80",
+    image: odisha14,
     popularPlaces: ["Bhubaneswar", "Konark Sun Temple", "Puri Jagannath Temple", "Chilika Lake"],
     startingPrice: "₹9,499",
     packageCount: 1
@@ -154,7 +164,7 @@ export const DOMESTIC_DESTINATIONS: Destination[] = [
     name: "West Bengal",
     category: "domestic",
     shortDesc: "Cultural Heritage & Wildlife – Victoria Memorial, Darjeeling Toy Train & Sundarbans.",
-    image: "https://images.unsplash.com/photo-1558431382-27e303142255?auto=format&fit=crop&w=1200&q=80",
+    image: wb16,
     popularPlaces: ["Kolkata", "Darjeeling", "Kalimpong", "Sundarbans National Park"],
     startingPrice: "₹8,999",
     packageCount: 2
@@ -164,7 +174,7 @@ export const DOMESTIC_DESTINATIONS: Destination[] = [
     name: "Gujarat",
     category: "domestic",
     shortDesc: "Vibrant Western Realm – Statue of Unity, White Rann of Kutch & Dwarka Somnath.",
-    image: "https://images.unsplash.com/photo-1609766857041-ed402ea8069a?auto=format&fit=crop&w=1200&q=80",
+    image: gujaratImg,
     popularPlaces: ["Ahmedabad", "Statue of Unity", "Dwarka", "Somnath", "Rann of Kutch", "Gir"],
     startingPrice: "₹10,999",
     packageCount: 2
@@ -174,7 +184,7 @@ export const DOMESTIC_DESTINATIONS: Destination[] = [
     name: "Madhya Pradesh",
     category: "domestic",
     shortDesc: "Heart of Sacred India – Mahakaleshwar Ujjain, Sanchi Stupa & Bhedaghat Marble Rocks.",
-    image: "https://images.unsplash.com/photo-1627894483216-2138af692e32?auto=format&fit=crop&w=1200&q=80",
+    image: mp21,
     popularPlaces: ["Indore", "Ujjain Mahakal", "Omkareshwar", "Bhopal", "Sanchi", "Jabalpur Bhedaghat"],
     startingPrice: "₹9,999",
     packageCount: 2,
