@@ -45,9 +45,10 @@ export const ReviewsPage: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight"
+            className="font-black text-white leading-tight"
           >
-            Traveler <span className="bg-gradient-to-r from-[#F7941D] via-amber-300 to-[#E91E63] bg-clip-text text-transparent">Stories & Reviews</span>
+            <span className="block text-4xl sm:text-6xl md:text-7xl lg:text-[5.8rem] tracking-wider text-white mb-2">Traveler</span>
+            <span className="bg-gradient-to-r from-[#F7941D] via-amber-300 to-[#E91E63] bg-clip-text text-transparent block text-3xl sm:text-5xl lg:text-6xl tracking-tight">Stories & Reviews</span>
           </motion.h1>
 
           {/* Subheading */}
