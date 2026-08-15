@@ -43,10 +43,10 @@ export const AboutPage: React.FC<AboutPageProps> = ({ onOpenEnquiry }) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight"
+            className="font-black text-white leading-tight"
           >
-            <span className="block">About</span>
-            <span className="bg-gradient-to-r from-[#F7941D] via-amber-300 to-[#E91E63] bg-clip-text text-transparent block">Namkamal Holidays™</span>
+            <span className="block text-5xl sm:text-7xl md:text-8xl lg:text-[6.8rem] tracking-wider text-white mb-2">About</span>
+            <span className="bg-gradient-to-r from-[#F7941D] via-amber-300 to-[#E91E63] bg-clip-text text-transparent block text-3xl sm:text-5xl lg:text-6xl tracking-tight">Namkamal Holidays™</span>
           </motion.h1>
 
           {/* Subheading / Tagline */}
