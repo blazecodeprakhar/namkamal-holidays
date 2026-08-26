@@ -39,7 +39,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-jaipur-royal-escape",
     code: "NKRAJ2N",
-    name: "Namkamal Jaipur Royal Escape",
+    name: "Jaipur Royal Escape",
     destinationId: "rajasthan",
     destinationName: "Rajasthan",
     category: "domestic",
@@ -115,7 +115,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-royal-rajasthan",
     code: "NKRAJ5N-JJ",
-    name: "Namkamal Royal Rajasthan",
+    name: "Royal Rajasthan",
     destinationId: "rajasthan",
     destinationName: "Rajasthan",
     category: "domestic",
@@ -192,7 +192,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-rajasthan-heritage",
     code: "NKRAJ6N-JJP",
-    name: "Namkamal Rajasthan Heritage",
+    name: "Rajasthan Heritage",
     destinationId: "rajasthan",
     destinationName: "Rajasthan",
     category: "domestic",
@@ -235,7 +235,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-best-of-rajasthan",
     code: "NKRAJ7N-JJU",
-    name: "Namkamal Best of Rajasthan",
+    name: "Best of Rajasthan",
     destinationId: "rajasthan",
     destinationName: "Rajasthan",
     category: "domestic",
@@ -280,7 +280,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-complete-rajasthan",
     code: "NKRAJ9N-CR",
-    name: "Namkamal Complete Rajasthan",
+    name: "Complete Rajasthan",
     destinationId: "rajasthan",
     destinationName: "Rajasthan",
     category: "domestic",
@@ -323,7 +323,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-rajasthan-wildlife-escape",
     code: "NKRAJ6N-W",
-    name: "Namkamal Rajasthan Wildlife Escape",
+    name: "Rajasthan Wildlife Escape",
     destinationId: "rajasthan",
     destinationName: "Rajasthan",
     category: "domestic",
@@ -367,7 +367,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-kerala-highlights",
     code: "NKKER5N",
-    name: "Namkamal Kerala Highlights",
+    name: "Kerala Highlights",
     destinationId: "kerala",
     destinationName: "Kerala",
     category: "domestic",
@@ -408,7 +408,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-kerala-grand-tour",
     code: "NKKER7N",
-    name: "Namkamal Kerala Grand Tour",
+    name: "Kerala Grand Tour",
     destinationId: "kerala",
     destinationName: "Kerala",
     category: "domestic",
@@ -456,7 +456,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-goa-beach-escape",
     code: "NKGOA3N",
-    name: "Namkamal Goa Beach Escape",
+    name: "Goa Beach Escape",
     destinationId: "goa",
     destinationName: "Goa",
     category: "domestic",
@@ -492,7 +492,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-goa-holiday",
     code: "NKGOA4N",
-    name: "Namkamal Goa Holiday",
+    name: "Goa Holiday",
     destinationId: "goa",
     destinationName: "Goa",
     category: "domestic",
@@ -534,7 +534,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-uttarakhand-highlights",
     code: "NKUT5N",
-    name: "Namkamal Uttarakhand Highlights",
+    name: "Uttarakhand Highlights",
     destinationId: "uttarakhand",
     destinationName: "Uttarakhand",
     category: "domestic",
@@ -573,7 +573,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-uttarakhand-wildlife-hills",
     code: "NKUT6N-C",
-    name: "Namkamal Uttarakhand Wildlife & Hills",
+    name: "Uttarakhand Wildlife & Hills",
     destinationId: "uttarakhand",
     destinationName: "Uttarakhand",
     category: "domestic",
@@ -618,7 +618,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-karnataka-heritage-hills",
     code: "NKKA7N",
-    name: "Namkamal Karnataka Heritage & Hills",
+    name: "Karnataka Heritage & Hills",
     destinationId: "karnataka",
     destinationName: "Karnataka",
     category: "domestic",
@@ -659,7 +659,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-coastal-karnataka",
     code: "NKKA5N-C",
-    name: "Namkamal Coastal Karnataka",
+    name: "Coastal Karnataka",
     destinationId: "karnataka",
     destinationName: "Karnataka",
     category: "domestic",
@@ -703,7 +703,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-kashmir-paradise",
     code: "NKJK6N",
-    name: "Namkamal Kashmir Paradise",
+    name: "Kashmir Paradise",
     destinationId: "kashmir",
     destinationName: "Jammu & Kashmir",
     category: "domestic",
@@ -748,7 +748,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-himachal-highlights",
     code: "NKHP6N",
-    name: "Namkamal Himachal Highlights",
+    name: "Himachal Highlights",
     destinationId: "himachal-pradesh",
     destinationName: "Himachal Pradesh",
     category: "domestic",
@@ -787,7 +787,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-himachal-grand-circuit",
     code: "NKHP9N",
-    name: "Namkamal Himachal Grand Circuit",
+    name: "Himachal Grand Circuit",
     destinationId: "himachal-pradesh",
     destinationName: "Himachal Pradesh",
     category: "domestic",
@@ -834,7 +834,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-delhi-discovery",
     code: "NKDEL3N",
-    name: "Namkamal Delhi Discovery",
+    name: "Delhi Discovery",
     destinationId: "delhi",
     destinationName: "Delhi",
     category: "domestic",
@@ -880,7 +880,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-uttar-pradesh-heritage-spiritual",
     code: "NKUP6N",
-    name: "Namkamal Uttar Pradesh Heritage & Spiritual",
+    name: "Uttar Pradesh Heritage & Spiritual",
     destinationId: "uttar-pradesh",
     destinationName: "Uttar Pradesh",
     category: "domestic",
@@ -928,7 +928,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-andaman-island-escape",
     code: "NKAN5N",
-    name: "Namkamal Andaman Island Escape",
+    name: "Andaman Island Escape",
     destinationId: "andaman",
     destinationName: "Andaman Islands",
     category: "domestic",
@@ -970,7 +970,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-andhra-highlights",
     code: "NKAP4N",
-    name: "Namkamal Andhra Highlights",
+    name: "Andhra Highlights",
     destinationId: "andhra-pradesh",
     destinationName: "Andhra Pradesh",
     category: "domestic",
@@ -1013,7 +1013,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-hyderabad-ramoji",
     code: "NKTS3N",
-    name: "Namkamal Hyderabad & Ramoji",
+    name: "Hyderabad & Ramoji",
     destinationId: "telangana",
     destinationName: "Telangana",
     category: "domestic",
@@ -1057,7 +1057,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-meghalaya-explorer",
     code: "NKMEG5N",
-    name: "Namkamal Meghalaya Explorer",
+    name: "Meghalaya Explorer",
     destinationId: "northeast",
     destinationName: "North East India",
     category: "domestic",
@@ -1096,7 +1096,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-assam-wildlife-escape",
     code: "NKAS4N",
-    name: "Namkamal Assam Wildlife Escape",
+    name: "Assam Wildlife Escape",
     destinationId: "northeast",
     destinationName: "North East India",
     category: "domestic",
@@ -1132,7 +1132,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-arunachal-tawang-explorer",
     code: "NKARU5N",
-    name: "Namkamal Arunachal Tawang Explorer",
+    name: "Arunachal Tawang Explorer",
     destinationId: "northeast",
     destinationName: "North East India",
     category: "domestic",
@@ -1173,7 +1173,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-sikkim-darjeeling",
     code: "NKSKWB6N",
-    name: "Namkamal Sikkim Darjeeling",
+    name: "Sikkim Darjeeling",
     destinationId: "northeast",
     destinationName: "North East India",
     category: "domestic",
@@ -1218,7 +1218,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-odisha-heritage-beach",
     code: "NKOD4N",
-    name: "Namkamal Odisha Heritage & Beach",
+    name: "Odisha Heritage & Beach",
     destinationId: "odisha",
     destinationName: "Odisha",
     category: "domestic",
@@ -1260,7 +1260,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-bengal-darjeeling",
     code: "NKWB5N",
-    name: "Namkamal Bengal & Darjeeling",
+    name: "Bengal & Darjeeling",
     destinationId: "west-bengal",
     destinationName: "West Bengal",
     category: "domestic",
@@ -1298,7 +1298,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-sundarbans-escape",
     code: "NKWB3N-S",
-    name: "Namkamal Sundarbans Escape",
+    name: "Sundarbans Escape",
     destinationId: "west-bengal",
     destinationName: "West Bengal",
     category: "domestic",
@@ -1336,7 +1336,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-gujarat-highlights",
     code: "NKGJ5N",
-    name: "Namkamal Gujarat Highlights",
+    name: "Gujarat Highlights",
     destinationId: "gujarat",
     destinationName: "Gujarat",
     category: "domestic",
@@ -1376,7 +1376,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-gujarat-grand-circuit",
     code: "NKGJ7N",
-    name: "Namkamal Gujarat Grand Circuit",
+    name: "Gujarat Grand Circuit",
     destinationId: "gujarat",
     destinationName: "Gujarat",
     category: "domestic",
@@ -1421,7 +1421,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-mp-spiritual-circuit",
     code: "NKMP4N",
-    name: "Namkamal MP Spiritual Circuit",
+    name: "MP Spiritual Circuit",
     destinationId: "madhya-pradesh",
     destinationName: "Madhya Pradesh",
     category: "domestic",
@@ -1459,7 +1459,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-mp-grand-heritage",
     code: "NKMP7N",
-    name: "Namkamal MP Grand Heritage",
+    name: "MP Grand Heritage",
     destinationId: "madhya-pradesh",
     destinationName: "Madhya Pradesh",
     category: "domestic",
@@ -1506,7 +1506,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-dubai-delight",
     code: "NKUAE4N",
-    name: "Namkamal Dubai Delight",
+    name: "Dubai Delight",
     destinationId: "uae",
     destinationName: "United Arab Emirates",
     category: "international",
@@ -1551,7 +1551,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-dubai-abu-dhabi",
     code: "NKUAE5N",
-    name: "Namkamal Dubai & Abu Dhabi",
+    name: "Dubai & Abu Dhabi",
     destinationId: "uae",
     destinationName: "United Arab Emirates",
     category: "international",
@@ -1598,7 +1598,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-bangkok-pattaya",
     code: "NKTHA5N",
-    name: "Namkamal Bangkok Pattaya",
+    name: "Bangkok Pattaya",
     destinationId: "thailand",
     destinationName: "Thailand",
     category: "international",
@@ -1641,7 +1641,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-bali-bliss",
     code: "NKBAL5N",
-    name: "Namkamal Bali Bliss",
+    name: "Bali Bliss",
     destinationId: "bali",
     destinationName: "Indonesia (Bali)",
     category: "international",
@@ -1685,7 +1685,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-singapore-highlights",
     code: "NKSG4N",
-    name: "Namkamal Singapore Highlights",
+    name: "Singapore Highlights",
     destinationId: "singapore",
     destinationName: "Singapore",
     category: "international",
@@ -1731,7 +1731,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-malaysia-highlights",
     code: "NKMYS5N",
-    name: "Namkamal Malaysia Highlights",
+    name: "Malaysia Highlights",
     destinationId: "malaysia",
     destinationName: "Malaysia",
     category: "international",
@@ -1773,7 +1773,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-vietnam-highlights",
     code: "NKVNM5N",
-    name: "Namkamal Vietnam Highlights",
+    name: "Vietnam Highlights",
     destinationId: "vietnam",
     destinationName: "Vietnam",
     category: "international",
@@ -1816,7 +1816,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-switzerland-panorama",
     code: "NKSWI6N",
-    name: "Namkamal Switzerland Panorama",
+    name: "Switzerland Panorama",
     destinationId: "switzerland",
     destinationName: "Switzerland",
     category: "international",

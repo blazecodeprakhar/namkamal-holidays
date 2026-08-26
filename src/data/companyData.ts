@@ -7,7 +7,7 @@ export const COMPANY_INFO = {
   role: "Founder / CEO",
   address: "S.No.5, Nath Nagar, Hanumangad Rd, Nanded, Maharashtra 431605",
   phone: "+91 95453 99825",
-  rawPhone: "919545399825",
+  rawPhone: "+919545399825",
   whatsapp: "+91 95453 99825",
   email: "info.namkamalholidays@gmail.com",
   website: "namkamal.com",

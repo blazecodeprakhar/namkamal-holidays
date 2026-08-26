@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Phone, MessageSquare, Menu, X, ChevronDown, Globe, MapPin, Sparkles } from 'lucide-react';
-import { COMPANY_INFO } from '../data/companyData';
+import { COMPANY_INFO, SERVICES_LIST } from '../data/companyData';
 import { DOMESTIC_DESTINATIONS, INTERNATIONAL_DESTINATIONS } from '../data/destinations';
 
 import logoIcon from '../assets/logo_icon.PNG';
@@ -16,6 +16,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [domesticDropdown, setDomesticDropdown] = useState(false);
   const [intDropdown, setIntDropdown] = useState(false);
+  const [servicesDropdown, setServicesDropdown] = useState(false);
 
   const [mobileDomesticOpen, setMobileDomesticOpen] = useState(true);
   const [mobileIntOpen, setMobileIntOpen] = useState(true);
@@ -39,6 +40,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
     setMobileMenuOpen(false);
     setDomesticDropdown(false);
     setIntDropdown(false);
+    setServicesDropdown(false);
   }, [location.pathname]);
 
   useEffect(() => {
@@ -133,7 +135,6 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
                 <div className="absolute top-full left-0 w-64 bg-white rounded-2xl shadow-xl border border-gray-100 p-2.5 py-3 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
                   <div className="text-xs font-bold text-[#E91E63] uppercase tracking-wider px-3 pb-2 border-b border-gray-100 mb-1 flex items-center justify-between">
                     <span>Popular India Packages</span>
-                    <span className="bg-pink-100 text-[#E91E63] text-[10px] px-1.5 py-0.5 rounded">6 Destinations</span>
                   </div>
                   {DOMESTIC_DESTINATIONS.map((dest) => (
                     <Link
@@ -192,12 +193,44 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
               )}
             </div>
 
-            <Link 
-              to="/services" 
-              className={`whitespace-nowrap px-3 py-2 rounded-lg transition-colors ${isActive('/services') ? 'text-[#F7941D] bg-orange-50 font-bold' : 'hover:text-[#F7941D] hover:bg-gray-50'}`}
+            {/* Services Dropdown */}
+            <div 
+              className="relative"
+              onMouseEnter={() => setServicesDropdown(true)}
+              onMouseLeave={() => setServicesDropdown(false)}
             >
-              Services
-            </Link>
+              <Link 
+                to="/services" 
+                className={`whitespace-nowrap px-3 py-2 rounded-lg flex items-center gap-1 transition-colors ${location.pathname.includes('/services') ? 'text-[#F7941D] bg-orange-50 font-bold' : 'hover:text-[#F7941D] hover:bg-gray-50'}`}
+              >
+                Services <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${servicesDropdown ? 'rotate-180 text-[#F7941D]' : ''}`} />
+              </Link>
+
+              {servicesDropdown && (
+                <div className="absolute top-full left-0 w-80 bg-white rounded-2xl shadow-xl border border-gray-100 p-2.5 py-3 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                  <div className="text-xs font-bold text-[#F7941D] uppercase tracking-wider px-3 pb-2 border-b border-gray-100 mb-1.5 flex items-center justify-between">
+                    <span>Our Travel Services</span>
+                  </div>
+                  <div className="max-h-[340px] overflow-y-auto space-y-0.5 custom-scrollbar">
+                    {SERVICES_LIST.map((svc) => (
+                      <Link
+                        key={svc.id}
+                        to="/services"
+                        className="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-orange-50 hover:text-[#F7941D] text-gray-700 text-xs font-medium transition-colors group"
+                      >
+                        <span className="group-hover:text-[#F7941D]">{svc.title}</span>
+                        <span className="text-[10px] text-gray-400 group-hover:text-[#F7941D] font-bold">→</span>
+                      </Link>
+                    ))}
+                  </div>
+                  <div className="mt-2 pt-2 border-t border-gray-100 px-3">
+                    <Link to="/services" className="text-xs font-bold text-[#F7941D] hover:underline flex items-center justify-between">
+                      View All Travel Services →
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </div>
 
             <Link 
               to="/reviews" 
@@ -348,7 +381,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
                   onClick={() => setMobileMenuOpen(false)}
                   className="col-span-2 text-center text-xs font-bold text-[#F7941D] underline pt-1"
                 >
-                  View All 6 India Destinations →
+                  View All India Destinations →
                 </Link>
               </div>
             )}

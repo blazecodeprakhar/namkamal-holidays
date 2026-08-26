@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, ShieldCheck, Compass, Headphones, Sliders, Star, CheckCircle, MessageSquare } from 'lucide-react';
+import { ArrowRight, ShieldCheck, Compass, Headphones, Sliders, Star, CheckCircle, MessageSquare, Phone } from 'lucide-react';
 import { SEOHead } from '../components/SEOHead';
 import { PackageCard } from '../components/PackageCard';
 import { DestinationCard } from '../components/DestinationCard';
@@ -348,7 +348,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenEnquiry }) => {
             </h2>
             
             <p className="text-sm sm:text-base text-gray-300 max-w-2xl mx-auto font-medium leading-relaxed">
-              Contact <strong className="text-white">Mr. Shubham Bomble</strong> and the team at Namkamal Holidays today for customized itineraries and instant best price quotes!
+              Direct support from <strong className="text-white">Mr. Shubham Bomble</strong> (<a href="tel:+919545399825" className="text-[#F7941D] hover:underline font-bold">+91 95453 99825</a>) – Contact the team at Namkamal Holidays today for customized itineraries and instant best price quotes!
             </p>
 
             {/* Action Buttons */}
@@ -361,7 +361,14 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenEnquiry }) => {
               </button>
 
               <a
-                href={`https://wa.me/${COMPANY_INFO.rawPhone}?text=Hello%20Namkamal%20Holidays`}
+                href="tel:+919545399825"
+                className="w-full sm:w-auto px-8 py-4 bg-gray-900 hover:bg-black text-white border border-gray-700 font-extrabold text-xs rounded-full shadow-xl flex items-center justify-center gap-2 transition-all hover:scale-105 active:scale-95"
+              >
+                <Phone className="w-4 h-4 text-[#F7941D]" /> Call +91 95453 99825
+              </a>
+
+              <a
+                href={`https://wa.me/919545399825?text=Hello%20Namkamal%20Holidays`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto px-8 py-4 bg-emerald-500 hover:bg-emerald-600 text-white font-extrabold text-xs rounded-full shadow-xl flex items-center justify-center gap-2 transition-all hover:scale-105 active:scale-95"
