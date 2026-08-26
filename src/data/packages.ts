@@ -275,8 +275,7 @@ export const PACKAGES_DATA: Package[] = [
     exclusions: ["Train/Flight", "Entry fees"],
     importantNotes: ["Attraction entry, permits, safari, boats, ropeways, cruises, special darshan and adventure activities are subject to availability, operating rules, weather and applicable charges."],
     cancellationTerms: ["As per policy."],
-    gallery: ["https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1200&q=80"],
-    isFeatured: true
+    gallery: ["https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1200&q=80"]
   },
   {
     id: "namkamal-complete-rajasthan",
