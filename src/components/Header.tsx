@@ -168,7 +168,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
                       {/* Sub-Col 2: South & Coastal */}
                       <div>
                         <div className="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-1.5 px-2">South & Coastal</div>
-                        {DOMESTIC_DESTINATIONS.slice(6, 11).map((dest) => (
+                        {DOMESTIC_DESTINATIONS.slice(6, 12).map((dest) => (
                           <Link
                             key={dest.id}
                             to={`/destinations/domestic/${dest.id}`}

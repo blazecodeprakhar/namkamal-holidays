@@ -189,6 +189,17 @@ export const DOMESTIC_DESTINATIONS: Destination[] = [
     startingPrice: "₹9,999",
     packageCount: 2,
     badge: "Spiritual & Heritage"
+  },
+  {
+    id: "maharashtra",
+    name: "Maharashtra",
+    category: "domestic",
+    shortDesc: "Gateway of India, Mahabaleshwar Valleys, Lonavala Forts & Shirdi Sai Dham.",
+    image: "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1200&q=80",
+    popularPlaces: ["Mumbai", "Pune", "Mahabaleshwar", "Lonavala", "Shirdi", "Nashik Trimbakeshwar", "Tarkarli"],
+    startingPrice: "₹7,499",
+    packageCount: 2,
+    badge: "Heritage & Hills"
   }
 ];
 

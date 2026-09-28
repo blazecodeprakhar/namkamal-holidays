@@ -67,7 +67,7 @@ export const DomesticHubPage: React.FC<DomesticHubPageProps> = ({ onOpenEnquiry 
               </h2>
             </div>
             <span className="text-xs font-semibold text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
-              6 Flagship States
+              All India Destinations
             </span>
           </div>
 
