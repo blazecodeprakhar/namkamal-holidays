@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Phone, MessageSquare, Menu, X, ChevronDown, Globe, MapPin, Sparkles } from 'lucide-react';
+import { Phone, MessageSquare, Menu, X, ChevronDown, Globe, MapPin } from 'lucide-react';
 import { COMPANY_INFO, SERVICES_LIST } from '../data/companyData';
 import { DOMESTIC_DESTINATIONS, INTERNATIONAL_DESTINATIONS } from '../data/destinations';
 
@@ -132,24 +132,89 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
               </Link>
 
               {domesticDropdown && (
-                <div className="absolute top-full left-0 w-64 bg-white rounded-2xl shadow-xl border border-gray-100 p-2.5 py-3 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
-                  <div className="text-xs font-bold text-[#E91E63] uppercase tracking-wider px-3 pb-2 border-b border-gray-100 mb-1 flex items-center justify-between">
-                    <span>Popular India Packages</span>
+                <div className="absolute top-full -left-28 xl:-left-40 w-[840px] max-w-[90vw] bg-white rounded-3xl shadow-2xl border border-gray-100 p-5 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                  {/* Top Bar inside Dropdown */}
+                  <div className="flex items-center justify-between pb-3 mb-3 border-b border-gray-100">
+                    <div className="flex items-center gap-2">
+                      <span className="text-xs font-extrabold text-[#F7941D] uppercase tracking-wider bg-orange-50 px-2.5 py-1 rounded-full border border-orange-200/60">
+                        Popular India Destinations
+                      </span>
+                      <span className="text-xs text-gray-400 font-medium">15+ Handpicked Locations</span>
+                    </div>
+                    <Link to="/destinations/domestic" className="text-xs font-bold text-[#F7941D] hover:underline flex items-center gap-1">
+                      View All Destinations →
+                    </Link>
                   </div>
-                  {DOMESTIC_DESTINATIONS.map((dest) => (
-                    <Link
-                      key={dest.id}
-                      to={`/destinations/domestic/${dest.id}`}
-                      className="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-orange-50 hover:text-[#F7941D] text-gray-700 text-sm transition-colors"
-                    >
-                      <span className="font-medium">{dest.name}</span>
-                      <span className="text-xs font-semibold text-[#F7941D] bg-orange-100 px-2 py-0.5 rounded-full">{dest.startingPrice}</span>
-                    </Link>
-                  ))}
-                  <div className="mt-2 pt-2 border-t border-gray-100 px-3">
-                    <Link to="/destinations/domestic" className="text-xs font-bold text-[#F7941D] hover:underline flex items-center justify-between">
-                      View All India Destinations →
-                    </Link>
+
+                  {/* Horizontal 3 Column Grid + 1 Featured Card */}
+                  <div className="grid grid-cols-12 gap-5">
+                    {/* Columns 1-9: Destinations split into 3 sub-columns */}
+                    <div className="col-span-9 grid grid-cols-3 gap-x-3 gap-y-1">
+                      {/* Sub-Col 1: North & Hills */}
+                      <div>
+                        <div className="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-1.5 px-2">North & Himalayas</div>
+                        {DOMESTIC_DESTINATIONS.slice(0, 6).map((dest) => (
+                          <Link
+                            key={dest.id}
+                            to={`/destinations/domestic/${dest.id}`}
+                            className="flex items-center justify-between px-2.5 py-1.5 rounded-xl hover:bg-orange-50 text-gray-700 hover:text-[#F7941D] text-xs font-medium transition-colors group"
+                          >
+                            <span className="truncate group-hover:translate-x-0.5 transition-transform">{dest.name}</span>
+                            <span className="text-[10px] font-bold text-[#F7941D] bg-orange-100/80 px-1.5 py-0.5 rounded-md shrink-0 ml-1">{dest.startingPrice}</span>
+                          </Link>
+                        ))}
+                      </div>
+
+                      {/* Sub-Col 2: South & Coastal */}
+                      <div>
+                        <div className="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-1.5 px-2">South & Coastal</div>
+                        {DOMESTIC_DESTINATIONS.slice(6, 11).map((dest) => (
+                          <Link
+                            key={dest.id}
+                            to={`/destinations/domestic/${dest.id}`}
+                            className="flex items-center justify-between px-2.5 py-1.5 rounded-xl hover:bg-orange-50 text-gray-700 hover:text-[#F7941D] text-xs font-medium transition-colors group"
+                          >
+                            <span className="truncate group-hover:translate-x-0.5 transition-transform">{dest.name}</span>
+                            <span className="text-[10px] font-bold text-[#F7941D] bg-orange-100/80 px-1.5 py-0.5 rounded-md shrink-0 ml-1">{dest.startingPrice}</span>
+                          </Link>
+                        ))}
+                      </div>
+
+                      {/* Sub-Col 3: East, West & Islands */}
+                      <div>
+                        <div className="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-1.5 px-2">East & Central</div>
+                        {DOMESTIC_DESTINATIONS.slice(11).map((dest) => (
+                          <Link
+                            key={dest.id}
+                            to={`/destinations/domestic/${dest.id}`}
+                            className="flex items-center justify-between px-2.5 py-1.5 rounded-xl hover:bg-orange-50 text-gray-700 hover:text-[#F7941D] text-xs font-medium transition-colors group"
+                          >
+                            <span className="truncate group-hover:translate-x-0.5 transition-transform">{dest.name}</span>
+                            <span className="text-[10px] font-bold text-[#F7941D] bg-orange-100/80 px-1.5 py-0.5 rounded-md shrink-0 ml-1">{dest.startingPrice}</span>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Right 3 Cols: Featured Highlight Card */}
+                    <div className="col-span-3 bg-gradient-to-br from-amber-500/10 via-orange-50 to-pink-500/10 p-4 rounded-2xl border border-orange-200/50 flex flex-col justify-between">
+                      <div>
+                        <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#F7941D] bg-white px-2 py-0.5 rounded-full shadow-xs">
+                          Popular Highlight
+                        </span>
+                        <h4 className="font-extrabold text-sm text-gray-900 mt-2">Custom India Tour Package</h4>
+                        <p className="text-[11px] text-gray-600 mt-1 leading-snug">Personalized itineraries with 100% flexibility & verified hotel stays.</p>
+                      </div>
+                      <button 
+                        onClick={() => {
+                          setDomesticDropdown(false);
+                          onOpenEnquiry();
+                        }}
+                        className="mt-3 w-full py-2 bg-gradient-to-r from-[#F7941D] to-[#E91E63] hover:opacity-95 text-white font-bold text-xs rounded-xl shadow-sm transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-1"
+                      >
+                        Plan Free Quote
+                      </button>
+                    </div>
                   </div>
                 </div>
               )}
@@ -169,25 +234,53 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
               </Link>
 
               {intDropdown && (
-                <div className="absolute top-full left-0 w-72 bg-white rounded-2xl shadow-xl border border-gray-100 p-2.5 py-3 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
-                  <div className="text-xs font-bold text-[#E91E63] uppercase tracking-wider px-3 pb-2 border-b border-gray-100 mb-1 flex items-center justify-between">
-                    <span>Global Destinations</span>
-                    <Globe className="w-3.5 h-3.5 text-[#E91E63]" />
+                <div className="absolute top-full -left-36 xl:-left-48 w-[760px] max-w-[90vw] bg-white rounded-3xl shadow-2xl border border-gray-100 p-5 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                  <div className="flex items-center justify-between pb-3 mb-3 border-b border-gray-100">
+                    <div className="flex items-center gap-2">
+                      <span className="text-xs font-extrabold text-[#E91E63] uppercase tracking-wider bg-pink-50 px-2.5 py-1 rounded-full border border-pink-200/60 flex items-center gap-1">
+                        <Globe className="w-3.5 h-3.5 text-[#E91E63]" /> Global Destinations
+                      </span>
+                      <span className="text-xs text-gray-400 font-medium">Passport Ready Vacations</span>
+                    </div>
+                    <Link to="/destinations/international" className="text-xs font-bold text-[#E91E63] hover:underline flex items-center gap-1">
+                      View All Packages →
+                    </Link>
                   </div>
-                  {INTERNATIONAL_DESTINATIONS.map((dest) => (
-                    <Link
-                      key={dest.id}
-                      to={`/destinations/international/${dest.id}`}
-                      className="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-pink-50 hover:text-[#E91E63] text-gray-700 text-sm transition-colors"
-                    >
-                      <span className="font-medium">{dest.name}</span>
-                      <span className="text-xs font-semibold text-[#E91E63] bg-pink-100 px-2 py-0.5 rounded-full">{dest.startingPrice}</span>
-                    </Link>
-                  ))}
-                  <div className="mt-2 pt-2 border-t border-gray-100 px-3">
-                    <Link to="/destinations/international" className="text-xs font-bold text-[#E91E63] hover:underline flex items-center justify-between">
-                      View All International Packages →
-                    </Link>
+
+                  <div className="grid grid-cols-12 gap-5">
+                    {/* Columns 1-8: Destinations in 2 columns */}
+                    <div className="col-span-8 grid grid-cols-2 gap-x-4 gap-y-1">
+                      {INTERNATIONAL_DESTINATIONS.map((dest) => (
+                        <Link
+                          key={dest.id}
+                          to={`/destinations/international/${dest.id}`}
+                          className="flex items-center justify-between px-3 py-2 rounded-xl hover:bg-pink-50/80 text-gray-700 hover:text-[#E91E63] text-xs font-medium transition-colors group"
+                        >
+                          <span className="font-semibold group-hover:translate-x-0.5 transition-transform">{dest.name}</span>
+                          <span className="text-[10px] font-bold text-[#E91E63] bg-pink-100 px-2 py-0.5 rounded-full">{dest.startingPrice}</span>
+                        </Link>
+                      ))}
+                    </div>
+
+                    {/* Columns 9-12: Featured International Card */}
+                    <div className="col-span-4 bg-gradient-to-br from-pink-500/10 via-rose-50 to-orange-500/10 p-4 rounded-2xl border border-pink-200/60 flex flex-col justify-between">
+                      <div>
+                        <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#E91E63] bg-white px-2 py-0.5 rounded-full shadow-xs">
+                          Visa & Flights
+                        </span>
+                        <h4 className="font-extrabold text-sm text-gray-900 mt-2">Hassle-Free Global Tours</h4>
+                        <p className="text-[11px] text-gray-600 mt-1 leading-snug">End-to-end visa assistance, luxury stays, and customized international sightseeing.</p>
+                      </div>
+                      <button 
+                        onClick={() => {
+                          setIntDropdown(false);
+                          onOpenEnquiry();
+                        }}
+                        className="mt-3 w-full py-2 bg-[#E91E63] hover:bg-pink-700 text-white font-bold text-xs rounded-xl shadow-sm transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-1"
+                      >
+                        Enquire International
+                      </button>
+                    </div>
                   </div>
                 </div>
               )}
@@ -207,26 +300,26 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
               </Link>
 
               {servicesDropdown && (
-                <div className="absolute top-full left-0 w-80 bg-white rounded-2xl shadow-xl border border-gray-100 p-2.5 py-3 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
-                  <div className="text-xs font-bold text-[#F7941D] uppercase tracking-wider px-3 pb-2 border-b border-gray-100 mb-1.5 flex items-center justify-between">
-                    <span>Our Travel Services</span>
+                <div className="absolute top-full -left-40 w-[720px] max-w-[90vw] bg-white rounded-3xl shadow-2xl border border-gray-100 p-5 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                  <div className="flex items-center justify-between pb-3 mb-3 border-b border-gray-100">
+                    <span className="text-xs font-extrabold text-[#F7941D] uppercase tracking-wider bg-orange-50 px-2.5 py-1 rounded-full border border-orange-200/60">
+                      Our Travel Services
+                    </span>
+                    <Link to="/services" className="text-xs font-bold text-[#F7941D] hover:underline flex items-center gap-1">
+                      View All Services →
+                    </Link>
                   </div>
-                  <div className="max-h-[340px] overflow-y-auto space-y-0.5 custom-scrollbar">
-                    {SERVICES_LIST.map((svc) => (
+                  <div className="grid grid-cols-3 gap-3">
+                    {SERVICES_LIST.slice(0, 9).map((svc) => (
                       <Link
                         key={svc.id}
                         to="/services"
-                        className="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-orange-50 hover:text-[#F7941D] text-gray-700 text-xs font-medium transition-colors group"
+                        className="p-2.5 rounded-xl hover:bg-orange-50 text-gray-800 hover:text-[#F7941D] text-xs font-medium transition-colors border border-transparent hover:border-orange-100 group flex flex-col justify-between"
                       >
-                        <span className="group-hover:text-[#F7941D]">{svc.title}</span>
-                        <span className="text-[10px] text-gray-400 group-hover:text-[#F7941D] font-bold">→</span>
+                        <span className="font-bold text-gray-900 group-hover:text-[#F7941D]">{svc.title}</span>
+                        <span className="text-[10px] text-gray-500 mt-1 line-clamp-1">{svc.description}</span>
                       </Link>
                     ))}
-                  </div>
-                  <div className="mt-2 pt-2 border-t border-gray-100 px-3">
-                    <Link to="/services" className="text-xs font-bold text-[#F7941D] hover:underline flex items-center justify-between">
-                      View All Travel Services →
-                    </Link>
                   </div>
                 </div>
               )}
@@ -430,7 +523,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
               isActive('/services') ? 'bg-orange-50 text-[#F7941D] border border-orange-100 shadow-sm' : 'bg-gray-50 text-gray-800 hover:bg-orange-50 hover:text-[#F7941D]'
             }`}
           >
-            <span>All 13 Travel Services</span>
+            <span>Travel Services</span>
             <span className="text-xs text-[#F7941D]">→</span>
           </Link>
 
@@ -476,7 +569,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
             }}
             className="w-full py-3.5 bg-gradient-to-r from-[#F7941D] to-[#E91E63] text-white rounded-2xl font-extrabold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-md active:scale-95 transition-all"
           >
-            <Sparkles className="w-4 h-4" /> Plan Customized Trip
+            Plan Customized Trip
           </button>
         </div>
 

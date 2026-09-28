@@ -141,7 +141,7 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <Link to="/services" className="hover:text-[#F7941D] transition-colors flex items-center gap-1.5 group">
-                  <ChevronRight className="w-3.5 h-3.5 text-[#F7941D] group-hover:translate-x-1 transition-transform" /> Travel Services (13 Offerings)
+                  <ChevronRight className="w-3.5 h-3.5 text-[#F7941D] group-hover:translate-x-1 transition-transform" /> Travel Services
                 </Link>
               </li>
               <li>

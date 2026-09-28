@@ -13,7 +13,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onOpenEnquiry }) => 
     <div className="overflow-hidden bg-gray-50/50">
       <SEOHead 
         title="Our Services | Namkamal Holidays™ - Domestic, International, Forex & Visa"
-        description="Explore 14 complete travel services by Namkamal Holidays: Domestic & International tour packages, customized holidays, honeymoon getaways, flight, train, hotel booking, forex exchange, visa & passport assistance."
+        description="Explore complete travel services by Namkamal Holidays: Domestic & International tour packages, customized holidays, honeymoon getaways, flight, train, hotel booking, forex exchange, visa & passport assistance."
       />
 
       {/* Header Banner - Premium Animated Hero Section */}
@@ -34,7 +34,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onOpenEnquiry }) => 
           >
             <Compass className="w-4 h-4 text-[#F7941D]" />
             <span className="text-xs font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-[#F7941D] to-pink-400 uppercase tracking-widest">
-              End-to-End Travel Solutions • 14 Services
+              End-to-End Travel Solutions
             </span>
           </motion.div>
 
