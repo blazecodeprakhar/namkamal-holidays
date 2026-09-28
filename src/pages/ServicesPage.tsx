@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Globe, Sliders, Heart, Users, Plane, Train, Hotel, FileCheck, BookOpen, Shield, Anchor, Banknote, CheckCircle2, Compass, ArrowRight, Layers } from 'lucide-react';
+import { MapPin, Globe, Sliders, Heart, Users, Plane, Train, Hotel, FileCheck, BookOpen, Shield, Anchor, Banknote, Award, CheckCircle2, Compass, ArrowRight, Layers } from 'lucide-react';
 import { SEOHead } from '../components/SEOHead';
 import { SERVICES_LIST } from '../data/companyData';
 
@@ -12,8 +12,8 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onOpenEnquiry }) => 
   return (
     <div className="overflow-hidden bg-gray-50/50">
       <SEOHead 
-        title="Our Services | Namkamal Holidays™ - Domestic, International, Forex & Visa"
-        description="Explore complete travel services by Namkamal Holidays: Domestic & International tour packages, customized holidays, honeymoon getaways, flight, train, hotel booking, forex exchange, visa & passport assistance."
+        title="Our Services | Namkamal Holidays™ - Domestic, International, Forex, Visa & LTC"
+        description="Explore complete travel services by Namkamal Holidays: Domestic & International tour packages, customized holidays, honeymoon getaways, flight, train, hotel booking, forex exchange, visa & passport assistance, and LTC travel assistance."
       />
 
       {/* Header Banner - Premium Animated Hero Section */}
@@ -56,7 +56,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onOpenEnquiry }) => 
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-base sm:text-lg text-gray-300 max-w-2xl mx-auto font-medium leading-relaxed"
           >
-            From customized tour packages to forex currency exchange, visa, passport, flight and hotel reservations – we handle every detail of your journey.
+            From customized tour packages to forex currency exchange, visa, passport, flight, hotel reservations, and LTC travel assistance – we handle every detail of your journey.
           </motion.p>
 
           {/* Quick Category Chips */}
@@ -72,7 +72,8 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onOpenEnquiry }) => 
               "💱 Forex Exchange",
               "✈️ Flight & Train Tickets",
               "🏨 Hotel Reservations",
-              "🛂 Visa & Passport"
+              "🛂 Visa & Passport",
+              "📜 LTC Assistance"
             ].map((chip, idx) => (
               <span key={idx} className="px-3.5 py-1.5 rounded-full bg-gray-900/90 border border-gray-800 text-gray-300 text-xs font-semibold backdrop-blur-sm">
                 {chip}
@@ -115,6 +116,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onOpenEnquiry }) => 
                       {idx === 11 && <Shield className="w-8 h-8" />}
                       {idx === 12 && <Anchor className="w-8 h-8" />}
                       {idx === 13 && <Banknote className="w-8 h-8" />}
+                      {idx === 14 && <Award className="w-8 h-8" />}
                     </div>
                   </div>
 

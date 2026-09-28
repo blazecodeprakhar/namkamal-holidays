@@ -141,5 +141,11 @@ export const SERVICES_LIST: ServiceItem[] = [
     title: "Forex Exchange",
     description: "Best currency exchange rates for international travel with multi-currency forex cards, cash currency exchange, and wire transfer assistance.",
     iconName: "Banknote"
+  },
+  {
+    id: "ltc-assistance",
+    title: "LTC Travel Assistance",
+    description: "Specialized Leave Travel Concession (LTC/LTA) packages for central & state government employees with official invoices, approved travel routes, and complete documentation support.",
+    iconName: "Award"
   }
 ];
