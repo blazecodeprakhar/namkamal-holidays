@@ -529,6 +529,421 @@ export const PACKAGES_DATA: Package[] = [
   },
 
   // ==========================================
+  // MAHARASHTRA
+  // ==========================================
+  {
+    id: "namkamal-konkan-coastal-escape",
+    code: "NKMH5N-KON",
+    name: "Namkamal Konkan Coastal Escape",
+    destinationId: "maharashtra",
+    destinationName: "Maharashtra",
+    category: "domestic",
+    duration: "5 Nights / 6 Days",
+    durationDays: 6,
+    startingPrice: "₹8,999",
+    travelType: "Coastal Escape & Forts",
+    overview: "Explore Maharashtra's gorgeous Konkan coastline featuring sea forts like Kolaba & Sindhudurg, pristine beaches of Ganpatipule & Tarkarli, and historic Thibaw Palace.",
+    tourHighlights: [
+      "Alibaug: Alibaug Beach and Kolaba Fort (subject to tide/boat operations)",
+      "Ratnagiri: Ratnadurg Fort and Thibaw Palace",
+      "Ganpatipule: Ganpatipule Temple and pristine beach",
+      "Tarkarli & Malvan: Tarkarli Beach and historic Sindhudurg Fort",
+      "Malvan coastal sightseeing"
+    ],
+    sightseeingPoints: [
+      "Alibaug Beach", "Kolaba Fort", "Ratnadurg Fort", "Thibaw Palace",
+      "Ganpatipule Temple", "Ganpatipule Beach", "Tarkarli Beach", "Sindhudurg Fort", "Malvan Coastal Belt"
+    ],
+    dayWiseItinerary: [
+      { day: 1, title: "Mumbai to Alibaug", description: "Mumbai to Alibaug; beach and Kolaba Fort subject to tide/boat operations." },
+      { day: 2, title: "Alibaug to Ratnagiri", description: "Alibaug to Ratnagiri; Ratnadurg Fort and local sightseeing." },
+      { day: 3, title: "Ratnagiri to Ganpatipule", description: "Ratnagiri to Ganpatipule; Ganpatipule Temple and beach." },
+      { day: 4, title: "Ganpatipule to Tarkarli / Malvan", description: "Ganpatipule to Tarkarli/Malvan." },
+      { day: 5, title: "Sindhudurg Fort & Tarkarli Beach", description: "Sindhudurg Fort and Tarkarli beach; coastal leisure." },
+      { day: 6, title: "Departure / Return Journey", description: "Departure/return journey." }
+    ],
+    hotelPlan: "Selected category as per quotation.",
+    meals: "As per selected meal plan.",
+    transfers: "Private AC vehicle for transfers and sightseeing",
+    inclusions: [
+      "Accommodation in selected hotel category",
+      "Daily breakfast as per meal plan",
+      "Private AC vehicle transfers & sightseeing",
+      "Driver allowance, toll tax, and parking fees"
+    ],
+    exclusions: [
+      "Flight / Train fare",
+      "Attraction entry tickets, safari & camera permits",
+      "Personal expenses, room service & tips"
+    ],
+    importantNotes: [
+      "Temple darshan, safari, boat rides, forts, entry tickets, road conditions, weather and operating timings are subject to availability and applicable rules."
+    ],
+    cancellationTerms: ["As per policy."],
+    gallery: ["https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1200&q=80"],
+    isFeatured: true
+  },
+  {
+    id: "namkamal-konkan-heritage-beaches",
+    code: "NKMH7N-KON",
+    name: "Namkamal Konkan Heritage & Beaches",
+    destinationId: "maharashtra",
+    destinationName: "Maharashtra",
+    category: "domestic",
+    duration: "7 Nights / 8 Days",
+    durationDays: 8,
+    startingPrice: "₹12,999",
+    travelType: "Comprehensive Konkan Coastal & Heritage Trail",
+    overview: "Experience the grand Konkan coastal belt from Alibaug, Harihareshwar temple & beaches, Dapoli coast, Ratnadurg & Sindhudurg forts to Tarkarli.",
+    tourHighlights: [
+      "Alibaug & Kolaba Fort",
+      "Harihareshwar Temple and beach",
+      "Dapoli coastal belt",
+      "Ratnagiri: Ratnadurg Fort",
+      "Ganpatipule Temple & Beach",
+      "Sindhudurg Fort & Tarkarli Beach"
+    ],
+    sightseeingPoints: [
+      "Alibaug Beach", "Kolaba Fort", "Harihareshwar Temple", "Dapoli Coast",
+      "Ratnadurg Fort", "Ganpatipule Temple", "Sindhudurg Fort", "Tarkarli Beach"
+    ],
+    dayWiseItinerary: [
+      { day: 1, title: "Mumbai to Alibaug", description: "Mumbai to Alibaug." },
+      { day: 2, title: "Alibaug to Harihareshwar / Dapoli", description: "Alibaug to Harihareshwar/Dapoli." },
+      { day: 3, title: "Dapoli Coastal Sightseeing", description: "Dapoli coastal sightseeing." },
+      { day: 4, title: "Ratnagiri Heritage", description: "Ratnagiri heritage." },
+      { day: 5, title: "Ganpatipule", description: "Ganpatipule." },
+      { day: 6, title: "Malvan & Sindhudurg Fort", description: "Malvan/Sindhudurg." },
+      { day: 7, title: "Tarkarli & Coastal Leisure", description: "Tarkarli and coastal leisure." },
+      { day: 8, title: "Departure / Return Journey", description: "Departure/return journey." }
+    ],
+    hotelPlan: "Selected category as per quotation.",
+    meals: "As per selected meal plan.",
+    transfers: "Private AC vehicle for transfers and sightseeing",
+    inclusions: [
+      "Accommodation in selected hotel category",
+      "Daily breakfast as per meal plan",
+      "Private AC vehicle transfers & sightseeing",
+      "Driver allowance, toll tax, and parking fees"
+    ],
+    exclusions: [
+      "Flight / Train fare",
+      "Attraction entry tickets, safari & camera permits",
+      "Personal expenses, room service & tips"
+    ],
+    importantNotes: [
+      "Temple darshan, safari, boat rides, forts, entry tickets, road conditions, weather and operating timings are subject to availability and applicable rules."
+    ],
+    cancellationTerms: ["As per policy."],
+    gallery: ["https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1200&q=80"]
+  },
+  {
+    id: "namkamal-ashtavinayak-yatra",
+    code: "NKMA3N-ASHTA",
+    name: "Namkamal Ashtavinayak Yatra",
+    destinationId: "maharashtra",
+    destinationName: "Maharashtra",
+    category: "domestic",
+    duration: "3 Nights / 4 Days",
+    durationDays: 4,
+    startingPrice: "₹7,499",
+    travelType: "Sacred Ganesha Pilgrimage",
+    overview: "Complete sacred Ashtavinayak yatra covering all 8 swayambhu Ganesha temples across Maharashtra starting from Pune.",
+    tourHighlights: [
+      "Morgaon – Mayureshwar Temple",
+      "Siddhatek – Siddhivinayak Temple",
+      "Theur – Chintamani Temple",
+      "Ranjangaon – Mahaganapati Temple",
+      "Ozar – Vighneshwar Temple",
+      "Lenyadri – Girijatmaj Temple",
+      "Pali – Ballaleshwar Temple",
+      "Mahad – Varadvinayak Temple"
+    ],
+    sightseeingPoints: [
+      "Morgaon Mayureshwar", "Siddhatek Siddhivinayak", "Theur Chintamani",
+      "Ranjangaon Mahaganapati", "Ozar Vighneshwar", "Lenyadri Girijatmaj",
+      "Pali Ballaleshwar", "Mahad Varadvinayak"
+    ],
+    dayWiseItinerary: [
+      { day: 1, title: "Pune Arrival | Morgaon, Siddhatek & Theur", description: "Pune arrival; Morgaon, Siddhatek and Theur." },
+      { day: 2, title: "Ranjangaon, Ozar & Lenyadri", description: "Ranjangaon, Ozar and Lenyadri." },
+      { day: 3, title: "Pali & Mahad Temple Route", description: "Pali and Mahad; remaining local temple route." },
+      { day: 4, title: "Pune Return & Departure", description: "Pune return and departure." }
+    ],
+    hotelPlan: "Selected category as per quotation.",
+    meals: "As per selected meal plan.",
+    transfers: "Private AC vehicle for transfers and sightseeing",
+    inclusions: [
+      "Accommodation in selected hotel category",
+      "Daily breakfast as per meal plan",
+      "Private AC vehicle transfers & sightseeing",
+      "Driver allowance, toll tax, and parking fees"
+    ],
+    exclusions: [
+      "Flight / Train fare",
+      "Attraction entry tickets, safari & camera permits",
+      "Personal expenses, room service & tips"
+    ],
+    importantNotes: [
+      "Temple darshan, safari, boat rides, forts, entry tickets, road conditions, weather and operating timings are subject to availability and applicable rules."
+    ],
+    cancellationTerms: ["As per policy."],
+    gallery: ["https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1200&q=80"]
+  },
+  {
+    id: "namkamal-maharashtra-jyotirlinga-yatra",
+    code: "NKMH4N-JYOT",
+    name: "Namkamal Maharashtra Jyotirlinga Yatra",
+    destinationId: "maharashtra",
+    destinationName: "Maharashtra",
+    category: "domestic",
+    duration: "4 Nights / 5 Days",
+    durationDays: 5,
+    startingPrice: "₹8,999",
+    travelType: "Sacred Shiva Pilgrimage",
+    overview: "Holy pilgrimage circuit to Maharashtra's revered Jyotirlinga shrines: Trimbakeshwar, Bhimashankar, Grishneshwar, Aundha Nagnath and Panchavati Nashik.",
+    tourHighlights: [
+      "Trimbakeshwar Jyotirlinga (Nashik)",
+      "Bhimashankar Jyotirlinga",
+      "Grishneshwar Jyotirlinga (Ellora)",
+      "Aundha Nagnath Temple",
+      "Nashik Panchavati & Ramkund"
+    ],
+    sightseeingPoints: [
+      "Trimbakeshwar Jyotirlinga", "Bhimashankar Jyotirlinga", "Grishneshwar Jyotirlinga",
+      "Aundha Nagnath Temple", "Nashik Panchavati"
+    ],
+    dayWiseItinerary: [
+      { day: 1, title: "Nashik Panchavati & Trimbakeshwar", description: "Nashik/Panchavati and Trimbakeshwar." },
+      { day: 2, title: "Trimbakeshwar to Bhimashankar", description: "Trimbakeshwar to Bhimashankar." },
+      { day: 3, title: "Bhimashankar to Chhatrapati Sambhajinagar", description: "Bhimashankar to Chhatrapati Sambhajinagar." },
+      { day: 4, title: "Ellora & Grishneshwar", description: "Ellora and Grishneshwar." },
+      { day: 5, title: "Aundha Nagnath & Departure", description: "Aundha Nagnath route and departure/onward journey." }
+    ],
+    hotelPlan: "Selected category as per quotation.",
+    meals: "As per selected meal plan.",
+    transfers: "Private AC vehicle for transfers and sightseeing",
+    inclusions: [
+      "Accommodation in selected hotel category",
+      "Daily breakfast as per meal plan",
+      "Private AC vehicle transfers & sightseeing",
+      "Driver allowance, toll tax, and parking fees"
+    ],
+    exclusions: [
+      "Flight / Train fare",
+      "Attraction entry tickets, safari & camera permits",
+      "Personal expenses, room service & tips"
+    ],
+    importantNotes: [
+      "Temple darshan, safari, boat rides, forts, entry tickets, road conditions, weather and operating timings are subject to availability and applicable rules."
+    ],
+    cancellationTerms: ["As per policy."],
+    gallery: ["https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1200&q=80"],
+    isFeatured: true
+  },
+  {
+    id: "namkamal-marathwada-heritage-temples",
+    code: "NKMH5N-MAR",
+    name: "Namkamal Marathwada Heritage & Temples",
+    destinationId: "maharashtra",
+    destinationName: "Maharashtra",
+    category: "domestic",
+    duration: "5 Nights / 6 Days",
+    durationDays: 6,
+    startingPrice: "₹9,999",
+    travelType: "UNESCO Caves & Sacred Shrines",
+    overview: "Explore UNESCO World Heritage Ajanta & Ellora Caves, Bibi Ka Maqbara, Shirdi Sai Baba Dham, Takht Sachkhand Sri Hazur Sahib Nanded, and Jyotirlinga shrines.",
+    tourHighlights: [
+      "Bibi Ka Maqbara (Taj of Deccan)",
+      "Ellora Caves & Kailasa Temple",
+      "Ajanta Caves UNESCO Heritage",
+      "Shirdi Sai Baba Temple",
+      "Takht Sachkhand Sri Hazur Sahib Nanded",
+      "Parli Vaijnath Temple & Aundha Nagnath Temple"
+    ],
+    sightseeingPoints: [
+      "Bibi Ka Maqbara", "Ellora Caves & Kailasa Temple", "Ajanta Caves",
+      "Shirdi Sai Baba Temple", "Nanded Hazur Sahib", "Parli Vaijnath Temple", "Aundha Nagnath Temple"
+    ],
+    dayWiseItinerary: [
+      { day: 1, title: "Chhatrapati Sambhajinagar & Bibi Ka Maqbara", description: "Chhatrapati Sambhajinagar and Bibi Ka Maqbara." },
+      { day: 2, title: "Ellora Caves & Grishneshwar", description: "Ellora Caves and Grishneshwar." },
+      { day: 3, title: "Ajanta Caves Excursion", description: "Ajanta Caves; onward route." },
+      { day: 4, title: "Shirdi Sai Baba Temple", description: "Shirdi Sai Baba Temple." },
+      { day: 5, title: "Nanded Hazur Sahib", description: "Nanded Hazur Sahib and local sightseeing." },
+      { day: 6, title: "Parli / Aundha Temple Route & Departure", description: "Parli/Aundha temple route and departure." }
+    ],
+    hotelPlan: "Selected category as per quotation.",
+    meals: "As per selected meal plan.",
+    transfers: "Private AC vehicle for transfers and sightseeing",
+    inclusions: [
+      "Accommodation in selected hotel category",
+      "Daily breakfast as per meal plan",
+      "Private AC vehicle transfers & sightseeing",
+      "Driver allowance, toll tax, and parking fees"
+    ],
+    exclusions: [
+      "Flight / Train fare",
+      "Attraction entry tickets, safari & camera permits",
+      "Personal expenses, room service & tips"
+    ],
+    importantNotes: [
+      "Temple darshan, safari, boat rides, forts, entry tickets, road conditions, weather and operating timings are subject to availability and applicable rules."
+    ],
+    cancellationTerms: ["As per policy."],
+    gallery: ["https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1200&q=80"]
+  },
+  {
+    id: "namkamal-vidarbha-wildlife-heritage",
+    code: "NKMH6N-VID",
+    name: "Namkamal Vidarbha Wildlife & Heritage",
+    destinationId: "maharashtra",
+    destinationName: "Maharashtra",
+    category: "domestic",
+    duration: "6 Nights / 7 Days",
+    durationDays: 7,
+    startingPrice: "₹14,999",
+    travelType: "Tiger Safari & Heritage Trail",
+    overview: "Thrilling wildlife safari expedition in Tadoba-Andhari Tiger Reserve & Pench National Park, combined with Deekshabhoomi Nagpur and Mahatma Gandhi's Sevagram Ashram in Wardha.",
+    tourHighlights: [
+      "Nagpur: Deekshabhoomi & Sitabuldi heritage area",
+      "Pench National Park jeep safari",
+      "Tadoba-Andhari Tiger Reserve jeep safari",
+      "Wardha: Mahatma Gandhi's Sevagram Ashram"
+    ],
+    sightseeingPoints: [
+      "Nagpur Deekshabhoomi", "Sitabuldi Fort Area", "Pench National Park Safari",
+      "Tadoba-Andhari Tiger Reserve Safari", "Wardha Sevagram Ashram"
+    ],
+    dayWiseItinerary: [
+      { day: 1, title: "Nagpur City Sightseeing", description: "Nagpur city sightseeing." },
+      { day: 2, title: "Nagpur to Pench", description: "Nagpur to Pench; evening leisure/nature experience." },
+      { day: 3, title: "Pench National Park Safari", description: "Pench safari subject to permit and availability." },
+      { day: 4, title: "Pench to Tadoba", description: "Pench to Tadoba." },
+      { day: 5, title: "Tadoba Tiger Reserve Safari", description: "Tadoba safari subject to permit and availability." },
+      { day: 6, title: "Tadoba to Wardha (Sevagram)", description: "Tadoba to Wardha; Sevagram Ashram." },
+      { day: 7, title: "Nagpur Return & Departure", description: "Nagpur return and departure." }
+    ],
+    hotelPlan: "Selected category as per quotation.",
+    meals: "As per selected meal plan.",
+    transfers: "Private AC vehicle for transfers and sightseeing",
+    inclusions: [
+      "Accommodation in selected hotel category",
+      "Daily breakfast as per meal plan",
+      "Private AC vehicle transfers & sightseeing",
+      "Driver allowance, toll tax, and parking fees"
+    ],
+    exclusions: [
+      "Flight / Train fare",
+      "Attraction entry tickets, safari & camera permits",
+      "Personal expenses, room service & tips"
+    ],
+    importantNotes: [
+      "Temple darshan, safari, boat rides, forts, entry tickets, road conditions, weather and operating timings are subject to availability and applicable rules."
+    ],
+    cancellationTerms: ["As per policy."],
+    gallery: ["https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1200&q=80"]
+  },
+  {
+    id: "namkamal-western-maharashtra-hills-temples",
+    code: "NKMH5N-WM",
+    name: "Namkamal Western Maharashtra Hills & Temples",
+    destinationId: "maharashtra",
+    destinationName: "Maharashtra",
+    category: "domestic",
+    duration: "5 Nights / 6 Days",
+    durationDays: 6,
+    startingPrice: "₹9,499",
+    travelType: "Hill Stations & Royal Temples",
+    overview: "Scenic hill station getaway & heritage tour through Shaniwar Wada Pune, Lonavala Tiger Point, Mahabaleshwar Venna Lake, Thoseghar Falls, and Kolhapur Mahalakshmi Temple.",
+    tourHighlights: [
+      "Pune: Shaniwar Wada & Aga Khan Palace",
+      "Lonavala: Tiger Point & Bhushi Dam",
+      "Mahabaleshwar: Venna Lake, Mapro Garden, Arthur's Seat",
+      "Satara: Thoseghar Waterfalls",
+      "Kolhapur: Shri Mahalakshmi Temple & New Palace"
+    ],
+    sightseeingPoints: [
+      "Shaniwar Wada Pune", "Aga Khan Palace", "Lonavala Tiger Point", "Bhushi Dam",
+      "Mahabaleshwar Venna Lake", "Mapro Garden", "Arthur's Seat", "Thoseghar Waterfalls",
+      "Kolhapur Mahalakshmi Temple", "New Palace Kolhapur"
+    ],
+    dayWiseItinerary: [
+      { day: 1, title: "Pune Heritage Sightseeing", description: "Pune heritage sightseeing." },
+      { day: 2, title: "Lonavala Sightseeing to Mahabaleshwar", description: "Lonavala sightseeing; onward Mahabaleshwar." },
+      { day: 3, title: "Mahabaleshwar Viewpoints & Venna Lake", description: "Mahabaleshwar viewpoints and Venna Lake." },
+      { day: 4, title: "Satara / Thoseghar Falls to Kolhapur", description: "Satara/Thoseghar Falls; Kolhapur." },
+      { day: 5, title: "Kolhapur Mahalakshmi Temple & New Palace", description: "Kolhapur Mahalakshmi Temple and New Palace." },
+      { day: 6, title: "Departure", description: "Departure." }
+    ],
+    hotelPlan: "Selected category as per quotation.",
+    meals: "As per selected meal plan.",
+    transfers: "Private AC vehicle for transfers and sightseeing",
+    inclusions: [
+      "Accommodation in selected hotel category",
+      "Daily breakfast as per meal plan",
+      "Private AC vehicle transfers & sightseeing",
+      "Driver allowance, toll tax, and parking fees"
+    ],
+    exclusions: [
+      "Flight / Train fare",
+      "Attraction entry tickets, safari & camera permits",
+      "Personal expenses, room service & tips"
+    ],
+    importantNotes: [
+      "Temple darshan, safari, boat rides, forts, entry tickets, road conditions, weather and operating timings are subject to availability and applicable rules."
+    ],
+    cancellationTerms: ["As per policy."],
+    gallery: ["https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1200&q=80"]
+  },
+  {
+    id: "namkamal-mumbai-matheran-escape",
+    code: "NKMH3N-MAT",
+    name: "Namkamal Mumbai & Matheran Escape",
+    destinationId: "maharashtra",
+    destinationName: "Maharashtra",
+    category: "domestic",
+    duration: "3 Nights / 4 Days",
+    durationDays: 4,
+    startingPrice: "₹6,999",
+    travelType: "Metropolis Heritage & Eco Hill Station",
+    overview: "Tour iconic Mumbai landmarks like Gateway of India & Marine Drive before escaping to eco-friendly, automobile-free Matheran hill station.",
+    tourHighlights: [
+      "Mumbai: Gateway of India, Marine Drive, CSMT heritage area",
+      "Matheran: Panorama Point, Echo Point, Charlotte Lake, Louisa Point"
+    ],
+    sightseeingPoints: [
+      "Gateway of India", "Marine Drive", "CSMT Heritage Area",
+      "Matheran Panorama Point", "Echo Point", "Charlotte Lake", "Louisa Point"
+    ],
+    dayWiseItinerary: [
+      { day: 1, title: "Mumbai Arrival & Marine Drive", description: "Mumbai arrival; Gateway of India and Marine Drive." },
+      { day: 2, title: "Mumbai Heritage & City Tour", description: "Mumbai heritage/city sightseeing." },
+      { day: 3, title: "Transfer to Matheran & Local Sights", description: "Transfer to Matheran; local sightseeing." },
+      { day: 4, title: "Matheran Leisure & Departure", description: "Matheran leisure and departure." }
+    ],
+    hotelPlan: "Selected category as per quotation.",
+    meals: "As per selected meal plan.",
+    transfers: "Private AC vehicle for transfers and sightseeing",
+    inclusions: [
+      "Accommodation in selected hotel category",
+      "Daily breakfast as per meal plan",
+      "Private AC vehicle transfers & sightseeing",
+      "Driver allowance, toll tax, and parking fees"
+    ],
+    exclusions: [
+      "Flight / Train fare",
+      "Attraction entry tickets, safari & camera permits",
+      "Personal expenses, room service & tips"
+    ],
+    importantNotes: [
+      "Temple darshan, safari, boat rides, forts, entry tickets, road conditions, weather and operating timings are subject to availability and applicable rules."
+    ],
+    cancellationTerms: ["As per policy."],
+    gallery: ["https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1200&q=80"]
+  },
+
+  // ==========================================
   // UTTARAKHAND
   // ==========================================
   {

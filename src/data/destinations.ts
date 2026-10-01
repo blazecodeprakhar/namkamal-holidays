@@ -194,12 +194,12 @@ export const DOMESTIC_DESTINATIONS: Destination[] = [
     id: "maharashtra",
     name: "Maharashtra",
     category: "domestic",
-    shortDesc: "Gateway of India, Mahabaleshwar Valleys, Lonavala Forts & Shirdi Sai Dham.",
+    shortDesc: "Konkan Coastal Escapes, Ashtavinayak Yatra, 5 Jyotirlingas, Ajanta Ellora Caves, Vidarbha Tigers & Hill Stations.",
     image: "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1200&q=80",
-    popularPlaces: ["Mumbai", "Pune", "Mahabaleshwar", "Lonavala", "Shirdi", "Nashik Trimbakeshwar", "Tarkarli"],
-    startingPrice: "₹7,499",
-    packageCount: 2,
-    badge: "Heritage & Hills"
+    popularPlaces: ["Konkan & Tarkarli", "Ashtavinayak Circuit", "5 Jyotirlingas", "Ajanta & Ellora Caves", "Vidarbha Safari", "Mahabaleshwar & Lonavala", "Mumbai & Matheran"],
+    startingPrice: "₹6,999",
+    packageCount: 8,
+    badge: "8 Circuits Master"
   }
 ];
 
