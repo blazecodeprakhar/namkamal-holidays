@@ -534,7 +534,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-konkan-coastal-escape",
     code: "NKMH5N-KON",
-    name: "Namkamal Konkan Coastal Escape",
+    name: "Konkan Coastal Escape",
     destinationId: "maharashtra",
     destinationName: "Maharashtra",
     category: "domestic",
@@ -586,7 +586,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-konkan-heritage-beaches",
     code: "NKMH7N-KON",
-    name: "Namkamal Konkan Heritage & Beaches",
+    name: "Konkan Heritage & Beaches",
     destinationId: "maharashtra",
     destinationName: "Maharashtra",
     category: "domestic",
@@ -640,7 +640,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-ashtavinayak-yatra",
     code: "NKMA3N-ASHTA",
-    name: "Namkamal Ashtavinayak Yatra",
+    name: "Ashtavinayak Yatra",
     destinationId: "maharashtra",
     destinationName: "Maharashtra",
     category: "domestic",
@@ -693,7 +693,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-maharashtra-jyotirlinga-yatra",
     code: "NKMH4N-JYOT",
-    name: "Namkamal Maharashtra Jyotirlinga Yatra",
+    name: "Maharashtra Jyotirlinga Yatra",
     destinationId: "maharashtra",
     destinationName: "Maharashtra",
     category: "domestic",
@@ -744,7 +744,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-marathwada-heritage-temples",
     code: "NKMH5N-MAR",
-    name: "Namkamal Marathwada Heritage & Temples",
+    name: "Marathwada Heritage & Temples",
     destinationId: "maharashtra",
     destinationName: "Maharashtra",
     category: "domestic",
@@ -796,7 +796,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-vidarbha-wildlife-heritage",
     code: "NKMH6N-VID",
-    name: "Namkamal Vidarbha Wildlife & Heritage",
+    name: "Vidarbha Wildlife & Heritage",
     destinationId: "maharashtra",
     destinationName: "Maharashtra",
     category: "domestic",
@@ -847,7 +847,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-western-maharashtra-hills-temples",
     code: "NKMH5N-WM",
-    name: "Namkamal Western Maharashtra Hills & Temples",
+    name: "Western Maharashtra Hills & Temples",
     destinationId: "maharashtra",
     destinationName: "Maharashtra",
     category: "domestic",
@@ -899,7 +899,7 @@ export const PACKAGES_DATA: Package[] = [
   {
     id: "namkamal-mumbai-matheran-escape",
     code: "NKMH3N-MAT",
-    name: "Namkamal Mumbai & Matheran Escape",
+    name: "Mumbai & Matheran Escape",
     destinationId: "maharashtra",
     destinationName: "Maharashtra",
     category: "domestic",
