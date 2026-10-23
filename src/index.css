@@ -10,15 +10,27 @@
     --brand-dark: #111827;
   }
 
-  html {
+  html,
+  body {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    max-width: 100%;
+    width: 100%;
+    position: relative;
+    -webkit-text-size-adjust: 100%;
   }
 
   body {
     font-family: 'Poppins', sans-serif;
     color: var(--brand-text);
     background-color: #FFFFFF;
+  }
+
+  #root {
     overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
   }
 }
 

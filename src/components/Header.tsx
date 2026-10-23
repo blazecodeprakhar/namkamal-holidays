@@ -368,16 +368,18 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
 
       {/* Mobile Backdrop Overlay */}
       <div 
-        className={`lg:hidden fixed inset-0 bg-black/65 backdrop-blur-sm z-50 transition-opacity duration-300 ${
-          mobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        className={`lg:hidden fixed inset-0 bg-black/65 backdrop-blur-sm z-50 transition-all duration-300 ${
+          mobileMenuOpen ? 'opacity-100 pointer-events-auto visible' : 'opacity-0 pointer-events-none invisible'
         }`}
         onClick={() => setMobileMenuOpen(false)}
       />
 
       {/* Mobile Drawer Menu - Sliding From Right Side */}
       <div 
-        className={`lg:hidden fixed top-0 right-0 h-full w-[85vw] sm:w-[380px] max-w-full bg-white z-50 flex flex-col justify-between shadow-2xl transition-transform duration-300 ease-out transform ${
-          mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        className={`lg:hidden fixed top-0 right-0 h-full w-[85vw] sm:w-[380px] max-w-full bg-white z-50 flex flex-col justify-between shadow-2xl transition-all duration-300 ease-out transform ${
+          mobileMenuOpen 
+            ? 'translate-x-0 opacity-100 visible pointer-events-auto' 
+            : 'translate-x-full opacity-0 invisible pointer-events-none'
         }`}
       >
         {/* Drawer Header */}

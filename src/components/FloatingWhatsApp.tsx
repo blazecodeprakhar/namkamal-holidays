@@ -54,7 +54,7 @@ export const FloatingWhatsApp: React.FC<FloatingWhatsAppProps> = ({ onOpenEnquir
 
       {/* Mobile Sticky Bottom Action Bar */}
       <div 
-        className={`md:hidden fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur-md border-t border-gray-200 px-3 py-2 grid grid-cols-3 gap-2 shadow-2xl transition-all duration-300 ${
+        className={`lg:hidden fixed bottom-0 left-0 right-0 w-full max-w-full z-40 bg-white/95 backdrop-blur-md border-t border-gray-200 px-3 py-2 grid grid-cols-3 gap-2 shadow-2xl box-border transition-all duration-300 ${
           isFooterVisible 
             ? 'opacity-0 translate-y-full pointer-events-none' 
             : 'opacity-100 translate-y-0 pointer-events-auto'
@@ -62,28 +62,28 @@ export const FloatingWhatsApp: React.FC<FloatingWhatsAppProps> = ({ onOpenEnquir
       >
         <a 
           href={`tel:${COMPANY_INFO.rawPhone}`}
-          className="flex flex-col items-center justify-center py-2 px-1 bg-gray-900 text-white rounded-xl font-bold text-[11px]"
+          className="min-w-0 flex flex-col items-center justify-center py-2 px-1 bg-gray-900 text-white rounded-xl font-bold text-[11px] active:scale-95 transition-transform"
         >
-          <Phone className="w-4 h-4 text-[#F7941D] mb-0.5" />
-          <span>Call Now</span>
+          <Phone className="w-4 h-4 text-[#F7941D] mb-0.5 shrink-0" />
+          <span className="truncate max-w-full">Call Now</span>
         </a>
 
         <a 
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex flex-col items-center justify-center py-2 px-1 bg-emerald-500 text-white rounded-xl font-bold text-[11px]"
+          className="min-w-0 flex flex-col items-center justify-center py-2 px-1 bg-emerald-500 text-white rounded-xl font-bold text-[11px] active:scale-95 transition-transform"
         >
-          <MessageSquare className="w-4 h-4 fill-white mb-0.5" />
-          <span>WhatsApp</span>
+          <MessageSquare className="w-4 h-4 fill-white mb-0.5 shrink-0" />
+          <span className="truncate max-w-full">WhatsApp</span>
         </a>
 
         <button 
           onClick={onOpenEnquiry}
-          className="flex flex-col items-center justify-center py-2 px-1 bg-gradient-to-r from-[#F7941D] to-[#E91E63] text-white rounded-xl font-bold text-[11px] shadow-sm"
+          className="min-w-0 flex flex-col items-center justify-center py-2 px-1 bg-gradient-to-r from-[#F7941D] to-[#E91E63] text-white rounded-xl font-bold text-[11px] shadow-sm active:scale-95 transition-transform cursor-pointer"
         >
-          <Send className="w-4 h-4 mb-0.5" />
-          <span>Enquire</span>
+          <Send className="w-4 h-4 mb-0.5 shrink-0" />
+          <span className="truncate max-w-full">Enquire</span>
         </button>
       </div>
     </>
