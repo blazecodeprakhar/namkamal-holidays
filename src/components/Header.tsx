@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Phone, MessageSquare, Menu, X, ChevronDown, Globe, MapPin } from 'lucide-react';
 import { COMPANY_INFO, SERVICES_LIST } from '../data/companyData';
-import { DOMESTIC_DESTINATIONS, INTERNATIONAL_DESTINATIONS } from '../data/destinations';
+import { INTERNATIONAL_DESTINATIONS, INDIA_REGIONS } from '../data/destinations';
 
 import logoIcon from '../assets/logo_icon.PNG';
 import logoText from '../assets/logo_text.PNG';
@@ -132,68 +132,52 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
               </Link>
 
               {domesticDropdown && (
-                <div className="absolute top-full -left-28 xl:-left-40 w-[840px] max-w-[90vw] bg-white rounded-3xl shadow-2xl border border-gray-100 p-5 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                <div className="absolute top-full -left-28 xl:-left-48 w-[940px] xl:w-[980px] max-w-[94vw] bg-white rounded-3xl shadow-2xl border border-gray-100 p-5 z-50 animate-in fade-in slide-in-from-top-2 duration-200">
                   {/* Top Bar inside Dropdown */}
                   <div className="flex items-center justify-between pb-3 mb-3 border-b border-gray-100">
                     <div className="flex items-center gap-2">
                       <span className="text-xs font-extrabold text-[#F7941D] uppercase tracking-wider bg-orange-50 px-2.5 py-1 rounded-full border border-orange-200/60">
                         Popular India Destinations
                       </span>
-                      <span className="text-xs text-gray-400 font-medium">15+ Handpicked Locations</span>
+                      <span className="text-xs text-gray-400 font-medium">6 Regional Zones</span>
                     </div>
                     <Link to="/destinations/domestic" className="text-xs font-bold text-[#F7941D] hover:underline flex items-center gap-1">
                       View All Destinations →
                     </Link>
                   </div>
 
-                  {/* Horizontal 3 Column Grid + 1 Featured Card */}
+                  {/* Horizontal Grid: 6 Regional Divisions (3 for 1st row, 3 for 2nd row) + Featured Highlight Card */}
                   <div className="grid grid-cols-12 gap-5">
-                    {/* Columns 1-9: Destinations split into 3 sub-columns */}
-                    <div className="col-span-9 grid grid-cols-3 gap-x-3 gap-y-1">
-                      {/* Sub-Col 1: North & Hills */}
-                      <div>
-                        <div className="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-1.5 px-2">North & Himalayas</div>
-                        {DOMESTIC_DESTINATIONS.slice(0, 6).map((dest) => (
-                          <Link
-                            key={dest.id}
-                            to={`/destinations/domestic/${dest.id}`}
-                            className="flex items-center justify-between px-2.5 py-1.5 rounded-xl hover:bg-orange-50 text-gray-700 hover:text-[#F7941D] text-xs font-medium transition-colors group"
-                          >
-                            <span className="truncate group-hover:translate-x-0.5 transition-transform">{dest.name}</span>
-                            <span className="text-[10px] font-bold text-[#F7941D] bg-orange-100/80 px-1.5 py-0.5 rounded-md shrink-0 ml-1">{dest.startingPrice}</span>
-                          </Link>
-                        ))}
-                      </div>
+                    {/* Columns 1-9: 6 Regional Zones (2 rows of 3 columns) */}
+                    <div className="col-span-9 grid grid-cols-3 gap-x-4 gap-y-4">
+                      {INDIA_REGIONS.map((region) => (
+                        <div key={region.id} className="flex flex-col">
+                          {/* Region Header with English & Hindi Title */}
+                          <div className="flex items-center gap-1.5 mb-1.5 px-2">
+                            <span className="text-[11px] font-extrabold text-gray-900 uppercase tracking-wider">
+                              {region.name}
+                            </span>
+                            <span className="text-[10px] font-semibold text-[#F7941D] bg-orange-50 px-1.5 py-0.5 rounded border border-orange-200/60">
+                              {region.hindiName}
+                            </span>
+                          </div>
 
-                      {/* Sub-Col 2: South & Coastal */}
-                      <div>
-                        <div className="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-1.5 px-2">South & Coastal</div>
-                        {DOMESTIC_DESTINATIONS.slice(6, 12).map((dest) => (
-                          <Link
-                            key={dest.id}
-                            to={`/destinations/domestic/${dest.id}`}
-                            className="flex items-center justify-between px-2.5 py-1.5 rounded-xl hover:bg-orange-50 text-gray-700 hover:text-[#F7941D] text-xs font-medium transition-colors group"
-                          >
-                            <span className="truncate group-hover:translate-x-0.5 transition-transform">{dest.name}</span>
-                            <span className="text-[10px] font-bold text-[#F7941D] bg-orange-100/80 px-1.5 py-0.5 rounded-md shrink-0 ml-1">{dest.startingPrice}</span>
-                          </Link>
-                        ))}
-                      </div>
-
-                      {/* Sub-Col 3: East, West & Islands */}
-                      <div>
-                        <div className="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-1.5 px-2">East & Central</div>
-                        {DOMESTIC_DESTINATIONS.slice(11).map((dest) => (
-                          <Link
-                            key={dest.id}
-                            to={`/destinations/domestic/${dest.id}`}
-                            className="flex items-center justify-between px-2.5 py-1.5 rounded-xl hover:bg-orange-50 text-gray-700 hover:text-[#F7941D] text-xs font-medium transition-colors group"
-                          >
-                            <span className="truncate group-hover:translate-x-0.5 transition-transform">{dest.name}</span>
-                            <span className="text-[10px] font-bold text-[#F7941D] bg-orange-100/80 px-1.5 py-0.5 rounded-md shrink-0 ml-1">{dest.startingPrice}</span>
-                          </Link>
-                        ))}
-                      </div>
+                          {/* Destination Items in this Region */}
+                          <div className="space-y-0.5">
+                            {region.destinations.map((dest) => (
+                              <Link
+                                key={dest.name}
+                                to={dest.to}
+                                onClick={() => setDomesticDropdown(false)}
+                                className="flex items-center justify-between px-2.5 py-1.5 rounded-xl hover:bg-orange-50 text-gray-700 hover:text-[#F7941D] text-xs font-medium transition-colors group"
+                              >
+                                <span className="truncate group-hover:translate-x-0.5 transition-transform">{dest.name}</span>
+                                <span className="text-[10px] font-bold text-[#F7941D] bg-orange-100/80 px-1.5 py-0.5 rounded-md shrink-0 ml-1">{dest.startingPrice}</span>
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
                     </div>
 
                     {/* Right 3 Cols: Featured Highlight Card */}
@@ -457,22 +441,32 @@ export const Header: React.FC<HeaderProps> = ({ onOpenEnquiry }) => {
             </button>
 
             {mobileDomesticOpen && (
-              <div className="p-3 pt-0 grid grid-cols-2 gap-2 animate-fade-in-down duration-200">
-                {DOMESTIC_DESTINATIONS.map(d => (
-                  <Link 
-                    key={d.id} 
-                    to={`/destinations/domestic/${d.id}`}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="text-xs bg-white p-2.5 rounded-xl shadow-sm border border-gray-100 font-semibold text-gray-800 hover:text-[#F7941D] transition-colors flex flex-col gap-0.5"
-                  >
-                    <span>{d.name}</span>
-                    <span className="text-[10px] font-bold text-[#F7941D]">{d.startingPrice}</span>
-                  </Link>
+              <div className="p-3 pt-0 space-y-2.5 animate-fade-in-down duration-200">
+                {INDIA_REGIONS.map((region) => (
+                  <div key={region.id} className="bg-white p-2.5 rounded-xl border border-gray-100 shadow-2xs">
+                    <div className="flex items-center justify-between pb-1.5 mb-1.5 border-b border-gray-100">
+                      <span className="text-xs font-black text-gray-800 uppercase tracking-wider">{region.name}</span>
+                      <span className="text-[10px] font-semibold text-[#F7941D] bg-orange-50 px-1.5 py-0.5 rounded border border-orange-200/50">{region.hindiName}</span>
+                    </div>
+                    <div className="grid grid-cols-2 gap-1.5">
+                      {region.destinations.map(d => (
+                        <Link 
+                          key={d.name} 
+                          to={d.to}
+                          onClick={() => setMobileMenuOpen(false)}
+                          className="text-xs bg-gray-50/80 p-2 rounded-lg font-semibold text-gray-800 hover:text-[#F7941D] transition-colors flex justify-between items-center"
+                        >
+                          <span className="truncate">{d.name}</span>
+                          <span className="text-[10px] font-bold text-[#F7941D] shrink-0 ml-1">{d.startingPrice}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
                 ))}
                 <Link 
                   to="/destinations/domestic"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="col-span-2 text-center text-xs font-bold text-[#F7941D] underline pt-1"
+                  className="block text-center text-xs font-bold text-[#F7941D] underline pt-1"
                 >
                   View All India Destinations →
                 </Link>

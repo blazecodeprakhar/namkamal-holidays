@@ -43,7 +43,7 @@ interface PcHeroSliderProps {
   onOpenEnquiry?: (prefillDestination?: string) => void;
 }
 
-export const PcHeroSlider: React.FC<PcHeroSliderProps> = () => {
+export const PcHeroSlider: React.FC<PcHeroSliderProps> = ({ onOpenEnquiry }) => {
   const [[page, direction], setPage] = useState<[number, number]>([0, 0]);
   const [isHovered, setIsHovered] = useState(false);
   const [activeHoverDot, setActiveHoverDot] = useState<number | null>(null);
@@ -51,7 +51,7 @@ export const PcHeroSlider: React.FC<PcHeroSliderProps> = () => {
   const imageIndex = Math.abs(page % HERO_IMAGES.length);
 
   const paginate = (newDirection: number) => {
-    setPage([page + newDirection, newDirection]);
+    setPage(([prevPage]) => [prevPage + newDirection, newDirection]);
   };
 
   const goToSlide = (targetIndex: number) => {
@@ -72,11 +72,11 @@ export const PcHeroSlider: React.FC<PcHeroSliderProps> = () => {
   useEffect(() => {
     if (isHovered) return;
     const timer = setInterval(() => {
-      paginate(1);
+      setPage(([prevPage]) => [prevPage + 1, 1]);
     }, 4500);
 
     return () => clearInterval(timer);
-  }, [page, isHovered]);
+  }, [isHovered]);
 
   return (
     <section 
@@ -118,9 +118,11 @@ export const PcHeroSlider: React.FC<PcHeroSliderProps> = () => {
                 paginate(1); // Swiped left -> Next slide
               } else if (swipe > swipeConfidenceThreshold || offset.x > 40) {
                 paginate(-1); // Swiped right -> Previous slide
+              } else if (Math.abs(offset.x) < 5) {
+                onOpenEnquiry?.(HERO_IMAGES[imageIndex].title);
               }
             }}
-            className="absolute inset-0 w-full h-full bg-white cursor-grab active:cursor-grabbing"
+            className="absolute inset-0 w-full h-full bg-white cursor-pointer"
           >
             <img
               src={HERO_IMAGES[imageIndex].src}

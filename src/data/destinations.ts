@@ -203,6 +203,86 @@ export const DOMESTIC_DESTINATIONS: Destination[] = [
   }
 ];
 
+export interface RegionalDestination {
+  name: string;
+  to: string;
+  startingPrice: string;
+}
+
+export interface IndiaRegion {
+  id: string;
+  name: string;
+  hindiName: string;
+  destinations: RegionalDestination[];
+}
+
+export const INDIA_REGIONS: IndiaRegion[] = [
+  {
+    id: "north",
+    name: "North India",
+    hindiName: "उत्तर भारत",
+    destinations: [
+      { name: "Rajasthan", to: "/destinations/domestic/rajasthan", startingPrice: "₹8,499" },
+      { name: "Himachal Pradesh", to: "/destinations/domestic/himachal-pradesh", startingPrice: "₹13,999" },
+      { name: "Uttarakhand", to: "/destinations/domestic/uttarakhand", startingPrice: "₹11,499" },
+      { name: "Jammu & Kashmir", to: "/destinations/domestic/kashmir", startingPrice: "₹14,499" },
+      { name: "Uttar Pradesh", to: "/destinations/domestic/uttar-pradesh", startingPrice: "₹13,499" },
+      { name: "Delhi", to: "/destinations/domestic/delhi", startingPrice: "₹7,999" },
+    ]
+  },
+  {
+    id: "south",
+    name: "South India",
+    hindiName: "दक्षिण भारत",
+    destinations: [
+      { name: "Kerala", to: "/destinations/domestic/kerala", startingPrice: "₹11,999" },
+      { name: "Karnataka", to: "/destinations/domestic/karnataka", startingPrice: "₹12,499" },
+      { name: "Andhra Pradesh", to: "/destinations/domestic/andhra-pradesh", startingPrice: "₹9,999" },
+      { name: "Telangana", to: "/destinations/domestic/telangana", startingPrice: "₹8,999" },
+    ]
+  },
+  {
+    id: "east",
+    name: "East India",
+    hindiName: "पूर्व भारत",
+    destinations: [
+      { name: "West Bengal", to: "/destinations/domestic/west-bengal", startingPrice: "₹8,999" },
+      { name: "Odisha", to: "/destinations/domestic/odisha", startingPrice: "₹9,499" },
+      { name: "Andaman Islands", to: "/destinations/domestic/andaman", startingPrice: "₹19,999" },
+    ]
+  },
+  {
+    id: "west",
+    name: "West India",
+    hindiName: "पश्चिम भारत",
+    destinations: [
+      { name: "Maharashtra", to: "/destinations/domestic/maharashtra", startingPrice: "₹6,999" },
+      { name: "Gujarat", to: "/destinations/domestic/gujarat", startingPrice: "₹10,999" },
+      { name: "Goa", to: "/destinations/domestic/goa", startingPrice: "₹6,999" },
+    ]
+  },
+  {
+    id: "central",
+    name: "Central India",
+    hindiName: "मध्य भारत",
+    destinations: [
+      { name: "Madhya Pradesh", to: "/destinations/domestic/madhya-pradesh", startingPrice: "₹9,999" },
+    ]
+  },
+  {
+    id: "northeast",
+    name: "North-East India",
+    hindiName: "ईशान्य भारत",
+    destinations: [
+      { name: "North East India", to: "/destinations/domestic/northeast", startingPrice: "₹15,999" },
+      { name: "Sikkim", to: "/packages/namkamal-sikkim-darjeeling", startingPrice: "₹17,499" },
+      { name: "Meghalaya", to: "/packages/namkamal-meghalaya-explorer", startingPrice: "₹15,999" },
+      { name: "Assam", to: "/packages/namkamal-assam-wildlife-escape", startingPrice: "₹13,999" },
+      { name: "Arunachal Pradesh", to: "/packages/namkamal-arunachal-tawang-explorer", startingPrice: "₹18,999" },
+    ]
+  }
+];
+
 export const INTERNATIONAL_DESTINATIONS: Destination[] = [
   {
     id: "uae",
