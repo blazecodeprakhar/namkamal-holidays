@@ -52,13 +52,9 @@ export const FloatingWhatsApp: React.FC<FloatingWhatsAppProps> = ({ onOpenEnquir
         </div>
       </a>
 
-      {/* Mobile Sticky Bottom Action Bar */}
+      {/* Mobile Sticky Bottom Action Bar - Locked for Phone Users */}
       <div 
-        className={`lg:hidden fixed bottom-0 left-0 right-0 w-full max-w-full z-40 bg-white/95 backdrop-blur-md border-t border-gray-200 px-3 py-2 grid grid-cols-3 gap-2 shadow-2xl box-border transition-all duration-300 ${
-          isFooterVisible 
-            ? 'opacity-0 translate-y-full pointer-events-none' 
-            : 'opacity-100 translate-y-0 pointer-events-auto'
-        }`}
+        className="lg:hidden fixed bottom-0 left-0 right-0 w-full max-w-full z-40 bg-white/95 backdrop-blur-md border-t border-gray-200 px-3 py-2 grid grid-cols-3 gap-2 shadow-2xl box-border"
       >
         <a 
           href={`tel:${COMPANY_INFO.rawPhone}`}

@@ -518,7 +518,7 @@ export const EnquiryForm: React.FC<EnquiryFormProps> = ({
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full py-3.5 px-6 rounded-2xl bg-gradient-to-r from-[#F7941D] to-[#E91E63] hover:opacity-95 text-white font-extrabold text-xs uppercase tracking-wider shadow-lg transition-all hover:scale-[1.01] active:scale-95 flex items-center justify-center gap-2 disabled:opacity-70"
+        className="w-full py-3.5 px-6 rounded-2xl bg-gradient-to-r from-[#F7941D] to-[#E91E63] hover:opacity-95 text-white font-extrabold text-xs uppercase tracking-wider shadow-lg transition-all hover:scale-[1.01] active:scale-95 flex items-center justify-center gap-2 disabled:opacity-70 cursor-pointer"
       >
         {isSubmitting ? (
           <span className="flex items-center gap-2">
@@ -531,7 +531,7 @@ export const EnquiryForm: React.FC<EnquiryFormProps> = ({
         )}
       </button>
 
-      <p className="text-[10px] text-gray-400 text-center">
+      <p className="text-[10px] text-gray-400 text-center pb-2">
         🔒 Your contact information is 100% confidential. Lead sent instantly.
       </p>
 

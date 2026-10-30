@@ -13,7 +13,7 @@
   html,
   body {
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    overflow-x: clip;
     max-width: 100%;
     width: 100%;
     position: relative;
@@ -27,10 +27,17 @@
   }
 
   #root {
-    overflow-x: hidden;
+    overflow-x: clip;
     width: 100%;
     max-width: 100%;
     min-height: 100vh;
+  }
+
+  header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 50;
   }
 }
 
@@ -75,6 +82,25 @@
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #E91E63;
+}
+
+/* Modal Refined Scrollbar */
+.custom-modal-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(247, 148, 29, 0.45) transparent;
+}
+.custom-modal-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+.custom-modal-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-modal-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(247, 148, 29, 0.45);
+  border-radius: 9999px;
+}
+.custom-modal-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(247, 148, 29, 0.85);
 }
 
 /* Keyframes Animations */

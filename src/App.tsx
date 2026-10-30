@@ -48,7 +48,7 @@ export function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="min-h-screen bg-white font-sans flex flex-col justify-between selection:bg-[#F7941D] selection:text-white w-full max-w-full overflow-x-hidden">
+      <div className="min-h-screen bg-white font-sans flex flex-col justify-between selection:bg-[#F7941D] selection:text-white w-full max-w-full overflow-x-clip">
 
         {/* Header */}
         <Header onOpenEnquiry={handleOpenEnquiry} />
